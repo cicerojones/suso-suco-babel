@@ -970,7 +970,7 @@ code::
 
 ::
 
-** class:: AmpComp
+** class:: AmpComp                                  :ugen:analysis:amplitude:
 summary:: Basic psychoacoustic amplitude compensation.
 related:: Classes/AmpCompA
 categories::  UGens>Analysis>Amplitude
