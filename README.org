@@ -1,3 +1,5 @@
 * Supercollider Documentation in Org-mode
 
 Emacs/Org-Mode + Supercollider = ??
+
+Tag all Ugen class documentation blocks and break up "sound-making" examples.
