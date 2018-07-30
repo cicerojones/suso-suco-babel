@@ -4360,7 +4360,7 @@ c.remove
 #+END_SRC
 
 ::
-** class:: BiPanB2
+** class:: BiPanB2                             :ugen:multichannel:ambisonics:
 summary:: 2D Ambisonic B-format panner.
 related:: Classes/DecodeB2, Classes/PanB, Classes/PanB2, Classes/Rotate2
 categories::  UGens>Multichannel>Ambisonics
@@ -13394,7 +13394,7 @@ plot({ Decay2.ar(Impulse.ar(1), 0.01, 0.001) })
 
 ::
 
-** class:: DecodeB2
+** class:: DecodeB2                            :ugen:multichannel:ambisonics:
 summary:: 2D Ambisonic B-format decoder.
 related:: Classes/BiPanB2, Classes/PanB, Classes/PanB2, Classes/Rotate2
 categories::  UGens>Multichannel>Ambisonics
