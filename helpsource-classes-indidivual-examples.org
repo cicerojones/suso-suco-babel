@@ -4627,7 +4627,7 @@ code::
 
 ::
 
-** class:: Blip
+** class:: Blip                               :ugen:generators:deterministic:
 summary:: Band limited impulse oscillator.
 related:: Classes/Impulse
 categories::  UGens>Generators>Deterministic
