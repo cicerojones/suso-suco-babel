@@ -295,15 +295,16 @@ method::asUGenInput
 returns:: the result of sending the value(for) message to this.
 discussion::
 code::
-#+BEGIN_SRC sclang
-// example:
-(
-var f, g, product;
-f = { SinOsc.ar(400) };
-g = { LFPulse.kr(8)  };
-product = f * g * 0.1;
-{ Pan2.ar(product, SinOsc.kr(0.3)) }.play;
-)
+#+name: playme1
+#+Begin_SRC sclang
+  // example:
+  (
+  var f, g, product;
+  f = { SinOsc.ar(400) };
+  g = { LFPulse.kr(8)  };
+  product = f * g * 0.1;
+  { Pan2.ar(product, SinOsc.kr(0.3)) }.play;
+  )
 #+END_SRC
 
 #+RESULTS:
