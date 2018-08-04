@@ -52,46 +52,95 @@ definitionlist::
 **** ::Classes/LFPar::, link::Classes/LFCub::, link::Classes/LFTri::, link::Classes/LFSaw::, link::Classes/Impulse::
 || arguments: code::frequency, phase, mul, add::
 
-code::
+***** code::
+
 #+BEGIN_SRC sclang
 // parabolic approximation of sine
 { LFPar.ar(LFPar.kr(LFPar.kr(0.2,0,8,10),0, 400,800),0,0.1) }.scope(1, zoom: 4);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { LFPar.ar(LFPar.kr(0.2, 0, 400,800),0,0.1) }.scope(1, zoom: 4);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { LFPar.ar(800,0,0.1) }.scope(1, zoom: 4);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 // since it is not band limited, there are aliasing artifacts
 { LFPar.ar(XLine.kr(100,15000,6),0,0.1) }.scope(1, zoom: 4);
 #+END_SRC
+
 ::
-code::
+
+***** code::
 #+BEGIN_SRC sclang
 // cubic approximation of sine
 { LFCub.ar(LFCub.kr(LFCub.kr(0.2,0,8,10),0, 400,800),0,0.1) }.scope(1, zoom: 4);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { LFCub.ar(LFCub.kr(0.2, 0, 400,800),0,0.1) }.scope(1, zoom: 4);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { LFCub.ar(800,0,0.1) }.scope(1, zoom: 4);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { LFCub.ar(XLine.kr(100,15000,6),0,0.1) }.scope(1, zoom: 4);
 #+END_SRC
 ::
-code::
+
+***** code::
 #+BEGIN_SRC sclang
 { LFTri.ar(LFTri.kr(LFTri.kr(0.2,0,8,10),0, 400,800),0,0.1) }.scope(1, zoom: 4);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { LFTri.ar(LFTri.kr(0.2, 0, 400,800),0,0.1) }.scope(1, zoom: 4);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { LFTri.ar(800,0,0.1) }.scope(1, zoom: 4);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { LFTri.ar(XLine.kr(100,15000,6),0,0.1) }.scope(1, zoom: 4);
 #+END_SRC
 ::
-code::
+
+***** code::
 #+BEGIN_SRC sclang
 { LFSaw.ar(LFSaw.kr(LFSaw.kr(0.2,0,8,10),0, 400,800),0,0.1) }.scope(1, zoom: 4);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { LFSaw.ar(LFSaw.kr(0.2, 0, 400,800),0,0.1) }.scope(1, zoom: 4);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { LFSaw.ar(100,0,0.1) }.scope(1, zoom: 4);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { LFSaw.ar(XLine.kr(100,15000,6),0,0.1) }.scope(1, zoom: 4);
 #+END_SRC
 ::
-code::
+
+***** code::
 #+BEGIN_SRC sclang
 { Impulse.ar(LFTri.kr(LFTri.kr(0.2,0,8,10),0, 400,800),0,0.1) }.scope(1, zoom: 4);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { Impulse.ar(LFTri.kr(0.2, 0, 400,800),0,0.1) }.scope(1, zoom: 4);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { Impulse.ar(100,0,0.1) }.scope(1, zoom: 4);
+
 { Impulse.ar(XLine.kr(100,15000,6),0,0.1) }.scope(1, zoom: 4);
 #+END_SRC
 ::
