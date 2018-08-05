@@ -1,6 +1,7 @@
 * title:: Tour of UGens
 :PROPERTIES:
 :ID:       03FDC781-8605-442B-AF5C-1AA04BAF2306
+:header-args: :results silent
 :END:
 ** summary:: Signal Processing in SuperCollider
 related:: Browse#UGens
