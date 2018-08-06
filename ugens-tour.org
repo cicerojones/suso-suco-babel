@@ -149,31 +149,54 @@ definitionlist::
 **** ::Classes/LFPulse::, link::Classes/VarSaw::
 || arguments: code::frequency, phase, width, mul, add::
 
-code::
+***** code::
+#+END_SRC
+
 #+BEGIN_SRC sclang
 { LFPulse.ar(LFPulse.kr(LFPulse.kr(0.2,0,0.5,8,10),0,0.5, 400,800),0,0.5,0.1) }.scope(1, zoom: 4);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { LFPulse.ar(LFPulse.kr(3, 0, 0.3, 200, 200), 0, 0.2, 0.1) }.scope(1, zoom: 4);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { LFPulse.ar(XLine.kr(100,15000,6),0,0.5,0.1) }.scope(1, zoom: 4);
 #+END_SRC
 ::
-code::
+
+***** code::
 #+BEGIN_SRC sclang
 // pulse width modulation
 { LFPulse.ar(100,0,MouseY.kr(0,1),0.1) }.scope(1, zoom: 4);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { LFPulse.ar(100,0,LFTri.kr(0.2,0,0.5,0.5),0.1) }.scope(1, zoom: 4);
 #+END_SRC
 ::
-code::
+
+***** code::
 #+BEGIN_SRC sclang
 { VarSaw.ar(VarSaw.kr(VarSaw.kr(0.2,0,0.2,8,10),0,0.2, 400,800),0,0.2,0.1) }.scope(1, zoom: 4);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { VarSaw.ar(VarSaw.kr(0.2, 0, 0.2, 400,800),0,0.2,0.1) }.scope(1, zoom: 4);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { VarSaw.ar(XLine.kr(100,15000,6),0,0.2,0.1) }.scope(1, zoom: 4);
 #+END_SRC
 ::
-code::
+
+***** code::
 #+BEGIN_SRC sclang
 // pulse width modulation
 { VarSaw.ar(100,0,MouseY.kr(0,1),0.1) }.scope(1, zoom: 4);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { VarSaw.ar(100,0,LFTri.kr(0.2,0,0.5,0.5),0.1) }.scope(1, zoom: 4);
 #+END_SRC
 ::
