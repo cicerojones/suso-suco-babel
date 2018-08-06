@@ -53,7 +53,7 @@ definitionlist::
 **** ::Classes/LFPar::, link::Classes/LFCub::, link::Classes/LFTri::, link::Classes/LFSaw::, link::Classes/Impulse::
 || arguments: code::frequency, phase, mul, add::
 
-***** code::
+***** LFPar code::
 
 #+BEGIN_SRC sclang
 // parabolic approximation of sine
@@ -75,7 +75,7 @@ definitionlist::
 
 ::
 
-***** code::
+***** LFCub code::
 #+BEGIN_SRC sclang
 // cubic approximation of sine
 { LFCub.ar(LFCub.kr(LFCub.kr(0.2,0,8,10),0, 400,800),0,0.1) }.scope(1, zoom: 4);
@@ -94,7 +94,7 @@ definitionlist::
 #+END_SRC
 ::
 
-***** code::
+***** LFTri code::
 #+BEGIN_SRC sclang
 { LFTri.ar(LFTri.kr(LFTri.kr(0.2,0,8,10),0, 400,800),0,0.1) }.scope(1, zoom: 4);
 #+END_SRC
@@ -112,7 +112,7 @@ definitionlist::
 #+END_SRC
 ::
 
-***** code::
+***** LFSaw code::
 #+BEGIN_SRC sclang
 { LFSaw.ar(LFSaw.kr(LFSaw.kr(0.2,0,8,10),0, 400,800),0,0.1) }.scope(1, zoom: 4);
 #+END_SRC
@@ -130,7 +130,7 @@ definitionlist::
 #+END_SRC
 ::
 
-***** code::
+***** Impulse code::
 #+BEGIN_SRC sclang
 { Impulse.ar(LFTri.kr(LFTri.kr(0.2,0,8,10),0, 400,800),0,0.1) }.scope(1, zoom: 4);
 #+END_SRC
