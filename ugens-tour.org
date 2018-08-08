@@ -149,7 +149,7 @@ definitionlist::
 **** ::Classes/LFPulse::, link::Classes/VarSaw::
 || arguments: code::frequency, phase, width, mul, add::
 
-***** code::
+***** LFPulse code::
 #+END_SRC
 
 #+BEGIN_SRC sclang
@@ -165,7 +165,7 @@ definitionlist::
 #+END_SRC
 ::
 
-***** code::
+***** LFPulse code::
 #+BEGIN_SRC sclang
 // pulse width modulation
 { LFPulse.ar(100,0,MouseY.kr(0,1),0.1) }.scope(1, zoom: 4);
@@ -176,7 +176,7 @@ definitionlist::
 #+END_SRC
 ::
 
-***** code::
+***** VarSaw code::
 #+BEGIN_SRC sclang
 { VarSaw.ar(VarSaw.kr(VarSaw.kr(0.2,0,0.2,8,10),0,0.2, 400,800),0,0.2,0.1) }.scope(1, zoom: 4);
 #+END_SRC
@@ -190,7 +190,7 @@ definitionlist::
 #+END_SRC
 ::
 
-***** code::
+***** VarSaw code::
 #+BEGIN_SRC sclang
 // pulse width modulation
 { VarSaw.ar(100,0,MouseY.kr(0,1),0.1) }.scope(1, zoom: 4);
