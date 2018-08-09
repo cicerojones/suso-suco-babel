@@ -205,8 +205,12 @@ definitionlist::
 || arguments: code::syncFreq, sawFreq, mul, add::
 
 code::
+
 #+BEGIN_SRC sclang
 { SyncSaw.ar(100, MouseX.kr(100, 1000), 0.1) }.scope(1, zoom: 4);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { SyncSaw.ar(100, Line.kr(100, 800, 12), 0.1) }.scope(1, zoom: 4);
 #+END_SRC
 ::
