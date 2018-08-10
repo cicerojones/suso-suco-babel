@@ -225,14 +225,26 @@ definitionlist::
 code::
 #+BEGIN_SRC sclang
   { SinOsc.ar(SinOsc.kr(SinOsc.kr(0.2,0,8,10),0, 400,800),0,0.1) }.scope(1, zoom: 4);
+#+END_SRC
+
+#+BEGIN_SRC sclang
   { SinOsc.ar(SinOsc.kr(0.2, 0, 400,800),0,0.1) }.scope(1, zoom: 4);
+#+END_SRC
+
+#+BEGIN_SRC sclang
   { SinOsc.ar(800,0,0.1) }.scope(1, zoom: 4);
+#+END_SRC
+
+#+BEGIN_SRC sclang
   { SinOsc.ar(XLine.kr(100,15000,6),0,0.1) }.scope(1, zoom: 4);
 #+END_SRC
 ::
 code::
 #+BEGIN_SRC sclang
 { FSinOsc.ar(800,0,0.1) }.scope(1, zoom: 4);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 // FSinOsc should not be frequency modulated.
 // Since it is based on a filter at the edge of stability, it will blow up:
 { FSinOsc.ar(FSinOsc.kr(FSinOsc.kr(0.2,0,8,10),0, 400,800),0,0.1) }.scope(1, zoom: 4);
