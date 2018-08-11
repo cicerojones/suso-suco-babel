@@ -256,7 +256,13 @@ code::
 code::
 #+BEGIN_SRC sclang
 { Blip.ar(XLine.kr(20000,200,6),100,0.2) }.scope(1);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { Blip.ar(XLine.kr(100,15000,6),100,0.2) }.scope(1); // no aliasing
+#+END_SRC
+
+#+BEGIN_SRC sclang
 // modulate number of harmonics
 { Blip.ar(200,Line.kr(1,100,20),0.2) }.scope(1);
 #+END_SRC
@@ -267,6 +273,9 @@ code::
 code::
 #+BEGIN_SRC sclang
 { Saw.ar(XLine.kr(20000,200,6),0.2) }.scope(1);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { Saw.ar(XLine.kr(100,15000,6),0.2) }.scope(1); // no aliasing
 #+END_SRC
 ::
@@ -276,10 +285,20 @@ code::
 code::
 #+BEGIN_SRC sclang
 { Pulse.ar(XLine.kr(20000,200,6),0.3,0.2) }.scope(1);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { Pulse.ar(XLine.kr(100,15000,6),0.3,0.2) }.scope(1); // no aliasing
+#+END_SRC
+
+#+BEGIN_SRC sclang
+
 
 // modulate pulse width
 { Pulse.ar(200, Line.kr(0.01,0.99,8), 0.2) }.scope(1);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 
 // two band limited square waves thru a resonant low pass filter
 { RLPF.ar(Pulse.ar([100,250],0.5,0.1), XLine.kr(8000,400,5), 0.05) }.scope(1);
@@ -291,6 +310,9 @@ code::
 code::
 #+BEGIN_SRC sclang
 { Klang.ar(`[ [800, 1000, 1200],[0.3, 0.3, 0.3],[pi,pi,pi]], 1, 0) * 0.4}.scope(1);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 
 { Klang.ar(`[ {exprand(400, 2000)}.dup(16), nil, nil ], 1, 0) * 0.04 }.scope(1);
 #+END_SRC
