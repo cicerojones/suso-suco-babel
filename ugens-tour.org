@@ -44,7 +44,7 @@ s.boot;
 #+END_SRC
 ::
 ** section:: Periodic Sources: Oscillators.
-*** subsection:: LF - "Low Frequency" Unit Generators.
+*** subsection:: LF - "Low Frequency" Unit Generators.                  :lfo:
 
 link::Classes/LFPar::, link::Classes/LFCub::, link::Classes/LFTri::, link::Classes/Impulse::, link::Classes/LFSaw::, link::Classes/LFPulse::, link::Classes/VarSaw::, link::Classes/SyncSaw:: - has geometric waveforms, not band limited.
 will cause aliasing at higher frequencies.
