@@ -415,6 +415,9 @@ code::
 // allocate tables 80 to 87
 8.do {|i| s.sendMsg(\b_alloc, 80+i, 1024); };
 )
+#+END_SRC
+
+#+BEGIN_SRC sclang
 
 (
 // fill tables 80 to 87
@@ -427,9 +430,13 @@ code::
 	s.listSendMsg([\b_gen, 80+i, \sine1, 7] ++ a);
 });
 )
+#+END_SRC
 
+#+BEGIN_SRC sclang
 { VOsc.ar(MouseX.kr(80,87), 120, 0, 0.3) }.scope(1, zoom:4);
+#+END_SRC
 
+#+BEGIN_SRC sclang
 (
 // allocate and fill tables 80 to 87
 8.do({|i|
@@ -448,8 +455,11 @@ code::
 #+BEGIN_SRC sclang
 // chorusing
 { VOsc3.ar(MouseX.kr(80,87), 120, 121.04, 119.37, 0.2) }.scope(1, zoom:4);
+#+END_SRC
 
+#+BEGIN_SRC sclang
 // chords
+
 { VOsc3.ar(MouseX.kr(80,87), 120, 151.13, 179.42, 0.2) }.scope(1, zoom:4);
 #+END_SRC
 ::
@@ -463,15 +473,34 @@ definitionlist::
 code::
 #+BEGIN_SRC sclang
 { LFClipNoise.ar(MouseX.kr(200, 10000, 1), 0.125) }.scope(1);
-{ LFNoise0.ar(MouseX.kr(200, 10000, 1), 0.25) }.scope(1);
-{ LFNoise1.ar(MouseX.kr(200, 10000, 1), 0.25) }.scope(1);
-{ LFNoise2.ar(MouseX.kr(200, 10000, 1), 0.25) }.scope(1);
+#+END_SRC
 
+#+BEGIN_SRC sclang
+{ LFNoise0.ar(MouseX.kr(200, 10000, 1), 0.25) }.scope(1);
+
+{ LFNoise1.ar(MouseX.kr(200, 10000, 1), 0.25) }.scope(1);
+#+END_SRC
+
+#+BEGIN_SRC sclang
+{ LFNoise2.ar(MouseX.kr(200, 10000, 1), 0.25) }.scope(1);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 // used as controls
 { LFPar.ar(LFClipNoise.kr(MouseX.kr(0.5, 64, 1), 200, 400), 0, 0.2) }.scope(1, zoom:8);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { LFPar.ar(LFNoise0.kr(MouseX.kr(0.5, 64, 1), 200, 400), 0, 0.2) }.scope(1, zoom:8);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { LFPar.ar(LFNoise1.kr(MouseX.kr(0.5, 64, 1), 200, 400), 0, 0.2) }.scope(1, zoom:8);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { LFPar.ar(LFNoise2.kr(MouseX.kr(0.5, 64, 1), 200, 400), 0, 0.2) }.scope(1, zoom:8);
+
 #+END_SRC
 ::
 ::
@@ -483,10 +512,23 @@ definitionlist::
 code::
 #+BEGIN_SRC sclang
 { ClipNoise.ar(0.2) }.scope(1);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { WhiteNoise.ar(0.2) }.scope(1);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { PinkNoise.ar(0.4) }.scope(1);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { BrownNoise.ar(0.2) }.scope(1);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { GrayNoise.ar(0.2) }.scope(1);
+
 #+END_SRC
 ::
 ::
@@ -498,7 +540,11 @@ definitionlist::
 code::
 #+BEGIN_SRC sclang
 { Dust.ar(MouseX.kr(1,10000,1), 0.4) }.scope(1, zoom:4);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { Dust2.ar(MouseX.kr(1,10000,1), 0.4) }.scope(1, zoom:4);
+
 #+END_SRC
 ::
 ::
