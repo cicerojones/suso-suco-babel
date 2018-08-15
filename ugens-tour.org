@@ -569,8 +569,17 @@ definitionlist::
 code::
 #+BEGIN_SRC sclang
 { LPF.ar(WhiteNoise.ar, MouseX.kr(1e2,2e4,1), 0.2) }.scope(1);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { HPF.ar(WhiteNoise.ar, MouseX.kr(1e2,2e4,1), 0.2) }.scope(1);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { LPF.ar(Saw.ar(100), MouseX.kr(1e2,2e4,1), 0.2) }.scope(1);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { HPF.ar(Saw.ar(100), MouseX.kr(1e2,2e4,1), 0.2) }.scope(1);
 #+END_SRC
 ::
