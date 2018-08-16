@@ -596,10 +596,21 @@ or in other words: the bandwidth in Hertz = rq * freq.
 code::
 #+BEGIN_SRC sclang
 { BPF.ar(WhiteNoise.ar, MouseX.kr(1e2,2e4,1), 0.4, 0.4) }.scope(1);
-{ BRF.ar(WhiteNoise.ar, MouseX.kr(1e2,2e4,1), 0.4, 0.2) }.scope(1);
-{ BPF.ar(Saw.ar(100), MouseX.kr(1e2,2e4,1), 0.4, 0.4) }.scope(1);
-{ BRF.ar(Saw.ar(100), MouseX.kr(1e2,2e4,1), 0.4, 0.2) }.scope(1);
+#+END_SRC
 
+#+BEGIN_SRC sclang
+{ BRF.ar(WhiteNoise.ar, MouseX.kr(1e2,2e4,1), 0.4, 0.2) }.scope(1);
+#+END_SRC
+
+#+BEGIN_SRC sclang
+{ BPF.ar(Saw.ar(100), MouseX.kr(1e2,2e4,1), 0.4, 0.4) }.scope(1);
+#+END_SRC
+
+#+BEGIN_SRC sclang
+{ BRF.ar(Saw.ar(100), MouseX.kr(1e2,2e4,1), 0.4, 0.2) }.scope(1);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 // modulating the bandwidth
 { BPF.ar(WhiteNoise.ar, 3000, MouseX.kr(0.01,0.7,1), 0.4) }.scope(1);
 #+END_SRC
