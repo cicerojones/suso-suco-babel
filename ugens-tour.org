@@ -623,10 +623,21 @@ definitionlist::
 **** ::Classes/RLPF::, link::Classes/RHPF:: - 12 dB / octave
 || arguments: code:: in, freq, rq, mul, add ::
 code::
+#+END_SRC
+
 #+BEGIN_SRC sclang
 { RLPF.ar(WhiteNoise.ar, MouseX.kr(1e2,2e4,1), 0.2, 0.2) }.scope(1);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { RHPF.ar(WhiteNoise.ar, MouseX.kr(1e2,2e4,1), 0.2, 0.2) }.scope(1);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { RLPF.ar(Saw.ar(100), MouseX.kr(1e2,2e4,1), 0.2, 0.2) }.scope(1);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { RHPF.ar(Saw.ar(100), MouseX.kr(1e2,2e4,1), 0.2, 0.2) }.scope(1);
 #+END_SRC
 ::
@@ -637,10 +648,16 @@ code::
 #+BEGIN_SRC sclang
 // modulate frequency
 { Resonz.ar(WhiteNoise.ar(0.5), XLine.kr(1000,8000,10), 0.05) }.scope(1);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 
 // modulate bandwidth
 { Resonz.ar(WhiteNoise.ar(0.5), 2000, XLine.kr(1, 0.001, 8)) }.scope(1);
 
+#+END_SRC
+
+#+BEGIN_SRC sclang
 // modulate bandwidth opposite direction
 { Resonz.ar(WhiteNoise.ar(0.5), 2000, XLine.kr(0.001, 1, 8)) }.scope(1);
 #+END_SRC
@@ -653,14 +670,23 @@ Internally it is the same as Resonz but the bandwidth is expressed as a ring tim
 code::
 #+BEGIN_SRC sclang
 { Ringz.ar(Dust.ar(3, 0.3), 2000, 2) }.scope(1, zoom:4);
+#+END_SRC
 
+#+BEGIN_SRC sclang
 { Ringz.ar(WhiteNoise.ar(0.005), 2000, 0.5) }.scope(1);
+#+END_SRC
 
+#+BEGIN_SRC sclang
 // modulate frequency
 { Ringz.ar(WhiteNoise.ar(0.005), XLine.kr(100,3000,10), 0.5) }.scope(1, zoom:4);
+#+END_SRC
 
+#+BEGIN_SRC sclang
 { Ringz.ar(Impulse.ar(6, 0, 0.3),  XLine.kr(100,3000,10), 0.5) }.scope(1, zoom:4);
 
+#+END_SRC
+
+#+BEGIN_SRC sclang
 // modulate ring time
 { Ringz.ar(Impulse.ar(6, 0, 0.3), 2000, XLine.kr(0.04, 4, 8)) }.scope(1, zoom:4);
 #+END_SRC
