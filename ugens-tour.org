@@ -865,9 +865,18 @@ s.sendMsg(\b_alloc, 80, 1024); // allocate table
 // fill with chebyshevs
 s.listSendMsg([\b_gen, 80, \cheby, 7] ++ {1.0.rand2.squared}.dup(6));
 
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { Shaper.ar(80, SinOsc.ar(600, 0, MouseX.kr(0,1))) * 0.3; }.scope(1);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 
 s.listSendMsg([\b_gen, 80, \cheby, 7] ++ {1.0.rand2.squared}.dup(6));
+#+END_SRC
+
+#+BEGIN_SRC sclang
 s.listSendMsg([\b_gen, 80, \cheby, 7] ++ {1.0.rand2.squared}.dup(6));
 #+END_SRC
 ::
