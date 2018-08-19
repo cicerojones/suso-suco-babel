@@ -752,14 +752,28 @@ code::
 code::
 #+BEGIN_SRC sclang
 { Klank.ar(`[[200, 671, 1153, 1723], nil, [1, 1, 1, 1]], Impulse.ar(2, 0, 0.1)) }.play;
+#+END_SRC
 
+#+BEGIN_SRC sclang
 { Klank.ar(`[[200, 671, 1153, 1723], nil, [1, 1, 1, 1]], Dust.ar(8, 0.1)) }.play;
+#+END_SRC
+
+#+BEGIN_SRC sclang
 
 { Klank.ar(`[[200, 671, 1153, 1723], nil, [1, 1, 1, 1]], PinkNoise.ar(0.007)) }.play;
+#+END_SRC
+
+#+BEGIN_SRC sclang
 
 { Klank.ar(`[ {exprand(200, 4000)}.dup(12), nil, nil ], PinkNoise.ar(0.007)) }.scope(1);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 
 { Klank.ar(`[ (1..13)*200, 1/(1..13), nil ], PinkNoise.ar(0.01)) }.scope(1);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 
 { Klank.ar(`[ (1,3..13)*200, 1/(1,3..13), nil ], PinkNoise.ar(0.01)) }.scope(1);
 #+END_SRC
