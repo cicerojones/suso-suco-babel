@@ -700,6 +700,9 @@ definitionlist::
 code::
 #+BEGIN_SRC sclang
 { OnePole.ar(WhiteNoise.ar(0.5), MouseX.kr(-0.99, 0.99)) }.scope(1);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { OneZero.ar(WhiteNoise.ar(0.5), MouseX.kr(-0.49, 0.49)) }.scope(1);
 #+END_SRC
 ::
@@ -713,11 +716,20 @@ code::
 #+BEGIN_SRC sclang
 // a signal with impulse noise.
 { Saw.ar(500, 0.1) + Dust2.ar(100, 0.9) }.scope(1);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 // after applying median filter
 { Median.ar(3, Saw.ar(500, 0.1) + Dust2.ar(100, 0.9)) }.scope(1);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 
 // a signal with impulse noise.
 { Saw.ar(500, 0.1) + Dust2.ar(100, 0.9) }.scope(1);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 // after applying slew rate limiter
 { Slew.ar(Saw.ar(500, 0.1) + Dust2.ar(100, 0.9),1000,1000) }.scope(1);
 #+END_SRC
