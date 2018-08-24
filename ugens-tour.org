@@ -904,6 +904,9 @@ pan controls typically range from -1 to +1
 code::
 #+BEGIN_SRC sclang
 { Pan2.ar(BrownNoise.ar, MouseX.kr(-1,1), 0.3) }.scope(2);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { Pan2.ar(BrownNoise.ar, SinOsc.kr(0.2), 0.3) }.scope(2);
 #+END_SRC
 ::
@@ -914,6 +917,9 @@ code::
 code::
 #+BEGIN_SRC sclang
 { LinPan2.ar(BrownNoise.ar, MouseX.kr(-1,1), 0.3) }.scope(2);
+#+END_SRC
+
+#+BEGIN_SRC sclang
 { LinPan2.ar(BrownNoise.ar, SinOsc.kr(0.2), 0.3) }.scope(2);
 #+END_SRC
 ::
@@ -939,7 +945,9 @@ code::
 code::
 #+BEGIN_SRC sclang
 { PanAz.ar(5, BrownNoise.ar, MouseX.kr(-1,1), 0.3, 2) }.scope(5);
+#+END_SRC
 
+#+BEGIN_SRC sclang
 // change width to 3
 { PanAz.ar(5, BrownNoise.ar, MouseX.kr(-1,1), 0.3, 3) }.scope(5);
 #+END_SRC
