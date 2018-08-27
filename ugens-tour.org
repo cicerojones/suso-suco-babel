@@ -43,14 +43,14 @@ s.boot;
 )
 #+END_SRC
 ::
-** section:: Periodic Sources: Oscillators.
+** section:: Periodic Sources: Oscillators.                         :sources:
 *** subsection:: LF - "Low Frequency" Unit Generators.                  :lfo:
 
 link::Classes/LFPar::, link::Classes/LFCub::, link::Classes/LFTri::, link::Classes/Impulse::, link::Classes/LFSaw::, link::Classes/LFPulse::, link::Classes/VarSaw::, link::Classes/SyncSaw:: - has geometric waveforms, not band limited.
 will cause aliasing at higher frequencies.
 
 definitionlist::
-**** ::Classes/LFPar::, link::Classes/LFCub::, link::Classes/LFTri::, link::Classes/LFSaw::, link::Classes/Impulse::
+**** ::Classes/LFPar::, link::Classes/LFCub::, link::Classes/LFTri::, link::Classes/LFSaw::, link::Classes/Impulse:: :args:
 || arguments: code::frequency, phase, mul, add::
 
 ***** LFPar code::
@@ -146,7 +146,7 @@ definitionlist::
 #+END_SRC
 ::
 
-**** ::Classes/LFPulse::, link::Classes/VarSaw::
+**** ::Classes/LFPulse::, link::Classes/VarSaw::                       :args:
 || arguments: code::frequency, phase, width, mul, add::
 
 ***** LFPulse code::
@@ -201,7 +201,7 @@ definitionlist::
 #+END_SRC
 ::
 
-**** ::Classes/SyncSaw::
+**** ::Classes/SyncSaw::                                               :args:
 || arguments: code::syncFreq, sawFreq, mul, add::
 
 code::
@@ -220,7 +220,7 @@ code::
 link::Classes/SinOsc::, link::Classes/FSinOsc::, link::Classes/Blip::, link::Classes/Saw::, link::Classes/Pulse:: - will not alias.
 
 definitionlist::
-**** ::Classes/SinOsc::, link::Classes/FSinOsc::
+**** ::Classes/SinOsc::, link::Classes/FSinOsc::                       :args:
 || arguments: code::frequency, phase, mul, add::
 code::
 #+BEGIN_SRC sclang
@@ -251,7 +251,7 @@ code::
 #+END_SRC
 ::
 
-**** ::Classes/Blip::
+**** ::Classes/Blip::                                                  :args:
 || arguments: code::frequency, numHarmonics, mul, add::
 code::
 #+BEGIN_SRC sclang
@@ -268,7 +268,7 @@ code::
 #+END_SRC
 ::
 
-**** ::Classes/Saw::
+**** ::Classes/Saw::                                                   :args:
 || arguments: code::frequency, mul, add::
 code::
 #+BEGIN_SRC sclang
@@ -280,7 +280,7 @@ code::
 #+END_SRC
 ::
 
-**** ::Classes/Pulse::
+**** ::Classes/Pulse::                                                 :args:
 || arguments: code::frequency, width, mul, add::
 code::
 #+BEGIN_SRC sclang
@@ -305,7 +305,7 @@ code::
 #+END_SRC
 ::
 
-**** ::Classes/Klang:: - sine oscillator bank
+**** ::Classes/Klang:: - sine oscillator bank                          :args:
 || arguments: code:: `[ frequencies, amplitudes, phases ], mul, add ::
 code::
 #+BEGIN_SRC sclang
@@ -334,7 +334,7 @@ b.sine1(1.0/(1..6), true, true, true);
 
 
 definitionlist::
-**** ::Classes/Osc::
+**** ::Classes/Osc::                                                   :args:
 || arguments: code:: buffer number, frequency, phase, mul, add ::
 
 code::
@@ -396,7 +396,7 @@ b.sine1({1.0.rand2.cubed}.dup(24).round(1e-3).postln);
 #+END_SRC
 ::
 
-**** ::Classes/COsc:: - two oscillators, detuned
+**** ::Classes/COsc:: - two oscillators, detuned                       :args:
 || arguments: code:: buffer number, frequency, beat frequency, mul, add ::
 code::
 #+BEGIN_SRC sclang
@@ -407,7 +407,7 @@ b.sine1(1.0/(1..6), true, true, true);
 #+END_SRC
 ::
 
-**** ::Classes/VOsc:: - multiple wave table crossfade oscillators
+**** ::Classes/VOsc:: - multiple wave table crossfade oscillators      :args:
 || arguments: code:: buffer number, frequency, phase, mul, add ::
 code::
 #+BEGIN_SRC sclang
@@ -449,7 +449,7 @@ code::
 #+END_SRC
 ::
 
-**** ::Classes/VOsc3:: - three VOscs summed.
+**** ::Classes/VOsc3:: - three VOscs summed.                           :args:
 || arguments: code:: buffer number, freq1, freq2, freq3, beat frequency, mul, add ::
 code::
 #+BEGIN_SRC sclang
@@ -464,11 +464,11 @@ code::
 #+END_SRC
 ::
 ::
-** section:: Aperiodic Sources: Noise.
+** section:: Aperiodic Sources: Noise.                              :sources:
 *** subsection:: LF "Low Frequency" Noise Generators.
 
 definitionlist::
-**** ::Classes/LFNoise0::, link::Classes/LFNoise1::, link::Classes/LFNoise2::, link::Classes/LFClipNoise::
+**** ::Classes/LFNoise0::, link::Classes/LFNoise1::, link::Classes/LFNoise2::, link::Classes/LFClipNoise:: :args:
 || arguments: code:: frequency, mul, add ::
 code::
 #+BEGIN_SRC sclang
@@ -507,7 +507,7 @@ code::
 *** subsection:: Broad Spectrum Noise Generators
 
 definitionlist::
-**** ::Classes/ClipNoise::, link::Classes/WhiteNoise::, link::Classes/PinkNoise::, link::Classes/BrownNoise::, link::Classes/GrayNoise::
+**** ::Classes/ClipNoise::, link::Classes/WhiteNoise::, link::Classes/PinkNoise::, link::Classes/BrownNoise::, link::Classes/GrayNoise:: :args:
 || arguments: code:: mul, add ::
 code::
 #+BEGIN_SRC sclang
@@ -535,7 +535,7 @@ code::
 *** subsection:: Impulse Noise Generators
 
 definitionlist::
-**** ::Classes/Dust::, link::Classes/Dust2::
+**** ::Classes/Dust::, link::Classes/Dust2::                           :args:
 || arguments: code:: density, mul, add ::
 code::
 #+BEGIN_SRC sclang
@@ -551,7 +551,7 @@ code::
 *** subsection:: Chaotic Noise Generators
 
 definitionlist::
-**** ::Classes/Crackle::
+**** ::Classes/Crackle::                                               :args:
 || arguments: code:: chaosParam, mul, add ::
 code::
 #+BEGIN_SRC sclang
@@ -559,12 +559,12 @@ code::
 #+END_SRC
 ::
 ::
-** section:: Filters
+** section:: Filters                                                :filters:
 
 *** subsection:: Low Pass, High Pass
 
 definitionlist::
-**** ::Classes/LPF::, link::Classes/HPF:: - 12 dB / octave
+**** ::Classes/LPF::, link::Classes/HPF:: - 12 dB / octave             :args:
 || arguments: code:: in, freq, mul, add ::
 code::
 #+BEGIN_SRC sclang
@@ -588,7 +588,7 @@ code::
 *** subsection:: Band Pass, Band Cut
 
 definitionlist::
-**** ::Classes/BPF::, link::Classes/BRF:: - 12 dB / octave
+**** ::Classes/BPF::, link::Classes/BRF:: - 12 dB / octave             :args:
 || arguments: code:: in, freq, rq, mul, add ::
 
 rq is the reciprocal of the Q of the filter,
@@ -620,7 +620,7 @@ code::
 *** subsection:: Resonant Low Pass, High Pass, Band Pass
 
 definitionlist::
-**** ::Classes/RLPF::, link::Classes/RHPF:: - 12 dB / octave
+**** ::Classes/RLPF::, link::Classes/RHPF:: - 12 dB / octave           :args:
 || arguments: code:: in, freq, rq, mul, add ::
 code::
 #+END_SRC
@@ -642,7 +642,7 @@ code::
 #+END_SRC
 ::
 
-**** ::Classes/Resonz:: - resonant band pass filter with uniform amplitude
+**** ::Classes/Resonz:: - resonant band pass filter with uniform amplitude :args:
 || arguments: code:: in, freq, rq, mul, add ::
 code::
 #+BEGIN_SRC sclang
@@ -663,7 +663,7 @@ code::
 #+END_SRC
 ::
 
-**** ::Classes/Ringz:: - ringing filter.
+**** ::Classes/Ringz:: - ringing filter.                               :args:
 || arguments: code:: in, frequency, ring time, mul, add ::
 
 Internally it is the same as Resonz but the bandwidth is expressed as a ring time.
@@ -746,7 +746,7 @@ code::
 #+END_SRC
 ::
 
-**** ::Classes/Klank:: - resonant filter bank
+**** ::Classes/Klank:: - resonant filter bank                          :args:
 || arguments: code:: `[ frequencies, amplitudes, ring times ], mul, add ::
 
 code::
@@ -779,7 +779,7 @@ code::
 #+END_SRC
 ::
 ::
-** section:: Distortion
+** section:: Distortion                                          :distortion:
 
 definitionlist::
 ## abs, max, squared, cubed
@@ -881,7 +881,7 @@ s.listSendMsg([\b_gen, 80, \cheby, 7] ++ {1.0.rand2.squared}.dup(6));
 #+END_SRC
 ::
 ::
-** section:: Panning
+** section:: Panning                                                :panning:
 code::
 #+BEGIN_SRC sclang
 (
@@ -896,7 +896,7 @@ s.boot;
 ::
 
 definitionlist::
-**** ::Classes/Pan2:: - equal power stereo pan a mono source
+**** ::Classes/Pan2:: - equal power stereo pan a mono source           :args:
 || arguments: code:: in, pan position, level ::
 
 pan controls typically range from -1 to +1
@@ -911,7 +911,7 @@ code::
 #+END_SRC
 ::
 
-**** ::Classes/LinPan2:: - linear pan a mono source (not equal power)
+**** ::Classes/LinPan2:: - linear pan a mono source (not equal power)  :args:
 || arguments: code:: in, pan position, level ::
 
 code::
@@ -924,7 +924,7 @@ code::
 #+END_SRC
 ::
 
-**** ::Classes/Balance2:: - balance a stereo source
+**** ::Classes/Balance2:: - balance a stereo source                    :args:
 || arguments: code:: left in, right in, pan position, level ::
 code::
 #+BEGIN_SRC sclang
@@ -940,7 +940,7 @@ code::
 #+END_SRC
 ::
 
-**** ::Classes/PanAz:: - azimuth panner to any number of channels
+**** ::Classes/PanAz:: - azimuth panner to any number of channels      :args:
 || arguments: code:: num channels, in, pan position, level, width ::
 code::
 #+BEGIN_SRC sclang
@@ -953,7 +953,7 @@ code::
 #+END_SRC
 ::
 
-**** ::Classes/XFade2:: - equal power cross fade between two inputs
+**** ::Classes/XFade2:: - equal power cross fade between two inputs    :args:
 || arguments: code:: in1, in2, crossfade, level ::
 code::
 #+BEGIN_SRC sclang
@@ -1000,7 +1000,7 @@ code::
 #+END_SRC
 ::
 ::
-** section:: Reverbs
+** section:: Reverbs                                                 :reverb:
 
 definitionlist::
 **** ::Classes/FreeVerb::
@@ -1035,7 +1035,7 @@ code::
 #+END_SRC
 ::
 ::
-** section:: Delays and Buffer UGens
+** section:: Delays and Buffer UGens                         :delays:buffers:
 
 definitionlist::
 **** ::Classes/DelayN::, link::Classes/DelayL::, link::Classes/DelayC:: - simple delays
@@ -1070,7 +1070,7 @@ DelayL.ar(z, 0.3, MouseX.kr(0,0.3), 1, z); // input is mixed with delay via the 
 #+END_SRC
 ::
 
-**** ::Classes/CombN::, link::Classes/CombL::, link::Classes/CombC:: - feedback delays
+**** ::Classes/CombN::, link::Classes/CombL::, link::Classes/CombC:: - feedback delays :args:
 || arguments: code:: in, maximum delay time, current delay time, echo decay time, mul, add ::
 
 code::
@@ -1100,7 +1100,7 @@ code::
 #+END_SRC
 ::
 
-**** ::Classes/AllpassN::, link::Classes/AllpassL::, link::Classes/AllpassC:: - allpass delay
+**** ::Classes/AllpassN::, link::Classes/AllpassL::, link::Classes/AllpassC:: - allpass delay :args:
 || arguments: code:: in, maximum delay time, current delay time, echo decay time, mul, add ::
 code::
 #+BEGIN_SRC sclang
@@ -1115,7 +1115,7 @@ code::
 #+END_SRC
 ::
 
-**** ::Classes/PlayBuf:: - buffer playback
+**** ::Classes/PlayBuf:: - buffer playback                             :args:
 || arguments: code:: numChannels, buffer number, rate, trigger, start pos, loop ::
 code::
 #+BEGIN_SRC sclang
@@ -1193,10 +1193,10 @@ b.free;
 #+END_SRC
 ::
 ::
-** section:: Granular Synthesis.
+** section:: Granular Synthesis.                                   :granular:
 
 definitionlist::
-**** ::Classes/TGrains:: - granulation of a buffer
+**** ::Classes/TGrains:: - granulation of a buffer                     :args:
 || arguments: code:: numChannels, trigger, buffer number, rate, center pos, dur, pan, amp, interpolation ::
 code::
 #+BEGIN_SRC sclang
@@ -1314,7 +1314,7 @@ b.free;
 #+END_SRC
 ::
 
-**** ::Classes/GrainSin:: - sine grain
+**** ::Classes/GrainSin:: - sine grain                                 :args:
 || arguments: code:: numChannels, trigger, dur, freq, pan, envbufnum ::
 
 code::
@@ -1346,11 +1346,11 @@ b = Buffer.sendCollection(s, Env([0, 1, 0], [0.5, 0.5], [8, -8]).discretize, 1);
 ::
 ::
 see also link::Classes/GrainFM::, link::Classes/GrainBuf:: and link::Classes/GrainIn::
-** section:: Control
+** section:: Control                                                :control:
 *** subsection:: Filters for Controls
 
 definitionlist::
-**** ::Classes/Decay:: - triggered exponential decay
+**** ::Classes/Decay:: - triggered exponential decay                   :args:
 || arguments: code:: in, decay time, mul, add ::
 code::
 #+BEGIN_SRC sclang
@@ -1360,7 +1360,7 @@ code::
 #+END_SRC
 ::
 
-**** ::Classes/Decay2:: - triggered exponential attack and exponential decay
+**** ::Classes/Decay2:: - triggered exponential attack and exponential decay :args:
 || arguments: code:: trigger, attack time, decay time, mul, add ::
 code::
 #+BEGIN_SRC sclang
@@ -1369,7 +1369,7 @@ code::
 #+END_SRC
 ::
 
-**** ::Classes/Lag::
+**** ::Classes/Lag::                                                   :args:
 || arguments: code:: trigger, duration ::
 code::
 #+BEGIN_SRC sclang
@@ -1388,7 +1388,7 @@ code::
 *** subsection:: Triggers
 
 definitionlist::
-**** ::Classes/Trig::, link::Classes/Trig1:: - timed duration gate
+**** ::Classes/Trig::, link::Classes/Trig1:: - timed duration gate     :args:
 || arguments: code:: trigger, duration ::
 code::
 #+BEGIN_SRC sclang
@@ -1399,7 +1399,7 @@ code::
 #+END_SRC
 ::
 
-**** ::Classes/TDelay:: - delays a trigger. only delays one pending trigger at a time.
+**** ::Classes/TDelay:: - delays a trigger. only delays one pending trigger at a time. :args:
 || arguments: code:: trigger, delay time ::
 code::
 #+BEGIN_SRC sclang
@@ -1414,7 +1414,7 @@ code::
 #+END_SRC
 ::
 
-**** ::Classes/Latch:: - sample and hold
+**** ::Classes/Latch:: - sample and hold                               :args:
 || arguments: code:: in, trigger ::
 code::
 #+BEGIN_SRC sclang
@@ -1423,7 +1423,7 @@ code::
 #+END_SRC
 ::
 
-**** ::Classes/Gate:: - pass or hold
+**** ::Classes/Gate:: - pass or hold                                   :args:
 || arguments: code:: in, trigger ::
 code::
 #+BEGIN_SRC sclang
@@ -1431,7 +1431,7 @@ code::
 #+END_SRC
 ::
 
-**** ::Classes/PulseCount:: - count triggers
+**** ::Classes/PulseCount:: - count triggers                           :args:
 || arguments: code:: trigger, reset ::
 code::
 #+BEGIN_SRC sclang
@@ -1446,7 +1446,7 @@ SinOsc.ar(
 #+END_SRC
 ::
 
-**** ::Classes/PulseDivider::
+**** ::Classes/PulseDivider::                                          :args:
 || arguments: code:: trigger, div, start ::
 code::
 #+BEGIN_SRC sclang
@@ -1492,7 +1492,7 @@ z.release;
 #+END_SRC
 ::
 ::
-** section:: Spectral
+** section:: Spectral                                              :spectral:
 
 FFT, IFFT and the phase vocoder ugens.
 
@@ -1586,8 +1586,8 @@ c = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 )
 #+END_SRC
 ::
-** section:: Techniques
-*** subsection:: Artificial Space
+* section:: Techniques
+** subsection:: Artificial Space
 Building a sense of space into a sound by setting up phase differences between the speakers.
 
 code::
@@ -1643,7 +1643,7 @@ code::
 )
 #+END_SRC
 ::
-*** subsection:: Parallel Structures
+** subsection:: Parallel Structures
 code::
 #+BEGIN_SRC sclang
 (
@@ -1713,7 +1713,7 @@ code::
 )
 #+END_SRC
 ::
-*** subsection:: Serial structures
+** subsection:: Serial structures
 code::
 #+BEGIN_SRC sclang
 (
