@@ -1,9 +1,11 @@
-* 
+* Generators
   :PROPERTIES:
   :header-args: :results silent
   :END:
 
 ** ugens
+
+*** LFPar                                                             :LFPar:
 #+name: ablock
 #+BEGIN_SRC sclang
     // parabolic approximation of sine
@@ -13,6 +15,7 @@
   { MulAdd.new(LFPar.ar(LFPar.kr(LFPar.kr(0.2,0,8,10),0, 400,800),0,0.1), MouseY.kr(0.005, 0.1)) }.play;
 #+END_SRC
 
+*** #+name: 0-block
 #+name: 0-block
 #+BEGIN_SRC sclang
   // { LFPar.ar(LFPar.kr(0.2, 0, 400,800),0,0.003) }.play;
@@ -22,89 +25,106 @@
 {MulAdd.new(f, MouseY.kr(0.003, 0.1))}.play
 #+END_SRC
 
+*** #+name: 1-block
 #+name: 1-block
 #+BEGIN_SRC sclang
   { LFPar.ar(800,0,0.02) }.play;
   // { LFPar.ar(800,0,0.003) }.play;
 #+END_SRC
 
+*** #+name: 2-block
 #+name: 2-block
 #+BEGIN_SRC sclang
 // since it is not band limited, there are aliasing artifacts
 { LFPar.ar(XLine.kr(100,15000,6),0,0.1) }.play;
 #+END_SRC
 
+*** #+name: 3-block
 #+name: 3-block
 #+BEGIN_SRC sclang
 // cubic approximation of sine
 { LFCub.ar(LFCub.kr(LFCub.kr(0.2,0,8,10),0, 400,800),0,0.1) }.play;
 #+END_SRC
 
+*** #+name: 4-block
 #+name: 4-block
 #+BEGIN_SRC sclang
 { LFCub.ar(LFCub.kr(0.2, 0, 400,800),0,0.1) }.play;
 #+END_SRC
 
+*** #+name: 5-block
 #+name: 5-block
 #+BEGIN_SRC sclang
 { LFCub.ar(800,0,0.1) }.play;
 #+END_SRC
 
+*** #+name: 6-block
 #+name: 6-block
 #+BEGIN_SRC sclang
 { LFCub.ar(XLine.kr(100,15000,6),0,0.1) }.play;
 #+END_SRC
 
+*** #+name: 7-block
 #+name: 7-block
 #+BEGIN_SRC sclang
 { LFTri.ar(LFTri.kr(LFTri.kr(0.2,0,8,10),0, 400,800),0,0.1) }.play;
 #+END_SRC
 
+*** #+name: 8-block
 #+name: 8-block
 #+BEGIN_SRC sclang
 { LFTri.ar(LFTri.kr(0.2, 0, 400,800),0,0.1) }.play;
 #+END_SRC
 
+*** #+name: 9-block
 #+name: 9-block
 #+BEGIN_SRC sclang
 { LFTri.ar(800,0,0.1) }.play;
 #+END_SRC
 
+*** #+name: 10-block
 #+name: 10-block
 #+BEGIN_SRC sclang
 { LFTri.ar(XLine.kr(100,15000,6),0,0.1) }.play;
 #+END_SRC
 
+*** #+name: 11-block
 #+name: 11-block
 #+BEGIN_SRC sclang
 { LFSaw.ar(LFSaw.kr(LFSaw.kr(0.2,0,8,10),0, 400,800),0,0.1) }.play;
 #+END_SRC
 
+*** #+name: 12-block
 #+name: 12-block
 #+BEGIN_SRC sclang
 { LFSaw.ar(LFSaw.kr(0.2, 0, 400,800),0,0.1) }.play;
 #+END_SRC
 
+*** #+name: 13-block
 #+name: 13-block
 #+BEGIN_SRC sclang
 { LFSaw.ar(100,0,0.1) }.play;
 #+END_SRC
 
+*** #+name: 14-block
 #+name: 14-block
 #+BEGIN_SRC sclang
 { LFSaw.ar(XLine.kr(100,15000,6),0,0.1) }.play;
 #+END_SRC
 
+*** #+name: 15-block
 #+name: 15-block
 #+BEGIN_SRC sclang
 { Impulse.ar(LFTri.kr(LFTri.kr(0.2,0,8,10),0, 400,800),0,0.1) }.play;
 #+END_SRC
 
+*** #+name: 16-block
 #+name: 16-block
 #+BEGIN_SRC sclang
 { Impulse.ar(LFTri.kr(0.2, 0, 400,800),0,0.1) }.play;
 #+END_SRC
 
+*** #+name: 17-block
 #+name: 17-block
 #+BEGIN_SRC sclang
 { Impulse.ar(100,0,0.1) }.play;
@@ -112,93 +132,111 @@
 { Impulse.ar(XLine.kr(100,15000,6),0,0.1) }.play;
 #+END_SRC
 
+*** #+name: 18-block
 #+name: 18-block
 #+BEGIN_SRC sclang
 { LFPulse.ar(LFPulse.kr(LFPulse.kr(0.2,0,0.5,8,10),0,0.5, 400,800),0,0.5,0.1) }.play;
 #+END_SRC
 
+*** #+name: 19-block
 #+name: 19-block
 #+BEGIN_SRC sclang
 { LFPulse.ar(LFPulse.kr(3, 0, 0.3, 200, 200), 0, 0.2, 0.1) }.play;
 #+END_SRC
 
+*** #+name: 20-block
 #+name: 20-block
 #+BEGIN_SRC sclang
 { LFPulse.ar(XLine.kr(100,15000,6),0,0.5,0.1) }.play;
 #+END_SRC
 
+*** #+name: 21-block
 #+name: 21-block
 #+BEGIN_SRC sclang
 // pulse width modulation
 { LFPulse.ar(100,0,MouseY.kr(0,1),0.1) }.play;
 #+END_SRC
 
+*** #+name: 22-block
 #+name: 22-block
 #+BEGIN_SRC sclang
 { LFPulse.ar(100,0,LFTri.kr(0.2,0,0.5,0.5),0.1) }.play;
 #+END_SRC
 
+*** #+name: 23-block
 #+name: 23-block
 #+BEGIN_SRC sclang
 { VarSaw.ar(VarSaw.kr(VarSaw.kr(0.2,0,0.2,8,10),0,0.2, 400,800),0,0.2,0.1) }.play;
 #+END_SRC
 
+*** #+name: 24-block
 #+name: 24-block
 #+BEGIN_SRC sclang
 { VarSaw.ar(VarSaw.kr(0.2, 0, 0.2, 400,800),0,0.2,0.1) }.play;
 #+END_SRC
 
+*** #+name: 25-block
 #+name: 25-block
 #+BEGIN_SRC sclang
 { VarSaw.ar(XLine.kr(100,15000,6),0,0.2,0.1) }.play;
 #+END_SRC
 
+*** #+name: 26-block
 #+name: 26-block
 #+BEGIN_SRC sclang
 // pulse width modulation
 { VarSaw.ar(100,0,MouseY.kr(0,1),0.1) }.play;
 #+END_SRC
 
+*** #+name: 27-block
 #+name: 27-block
 #+BEGIN_SRC sclang
 { VarSaw.ar(100,0,LFTri.kr(0.2,0,0.5,0.5),0.1) }.play;
 #+END_SRC
 
+*** #+name: 28-block
 #+name: 28-block
 #+BEGIN_SRC sclang
 { SyncSaw.ar(100, MouseX.kr(100, 1000), 0.1) }.play;
 #+END_SRC
 
+*** #+name: 29-block
 #+name: 29-block
 #+BEGIN_SRC sclang
 { SyncSaw.ar(100, Line.kr(100, 800, 12), 0.1) }.play;
 #+END_SRC
 
+*** #+name: 30-block
 #+name: 30-block
 #+BEGIN_SRC sclang
   { SinOsc.ar(SinOsc.kr(SinOsc.kr(0.2,0,8,10),0, 400,800),0,0.1) }.play;
 #+END_SRC
 
+*** #+name: 31-block
 #+name: 31-block
 #+BEGIN_SRC sclang
   { SinOsc.ar(SinOsc.kr(0.2, 0, 400,800),0,0.1) }.play;
 #+END_SRC
 
+*** #+name: 32-block
 #+name: 32-block
 #+BEGIN_SRC sclang
   { SinOsc.ar(800,0,0.1) }.play;
 #+END_SRC
 
+*** #+name: 33-block
 #+name: 33-block
 #+BEGIN_SRC sclang
   { SinOsc.ar(XLine.kr(100,15000,6),0,0.1) }.play;
 #+END_SRC
 
+*** #+name: 34-block
 #+name: 34-block
 #+BEGIN_SRC sclang
 { FSinOsc.ar(800,0,0.1) }.play;
 #+END_SRC
 
+*** #+name: 35-block
 #+name: 35-block
 #+BEGIN_SRC sclang
 // FSinOsc should not be frequency modulated.
@@ -206,42 +244,50 @@
 { FSinOsc.ar(FSinOsc.kr(FSinOsc.kr(0.2,0,8,10),0, 400,800),0,0.1) }.play;
 #+END_SRC
 
+*** #+name: 36-block
 #+name: 36-block
 #+BEGIN_SRC sclang
 { Blip.ar(XLine.kr(20000,200,6),100,0.2) }.play(1);
 #+END_SRC
 
+*** #+name: 37-block
 #+name: 37-block
 #+BEGIN_SRC sclang
 { Blip.ar(XLine.kr(100,15000,6),100,0.2) }.play(1); // no aliasing
 #+END_SRC
 
+*** #+name: 38-block
 #+name: 38-block
 #+BEGIN_SRC sclang
 // modulate number of harmonics
 { Blip.ar(200,Line.kr(1,100,20),0.2) }.play(1);
 #+END_SRC
 
+*** #+name: 39-block
 #+name: 39-block
 #+BEGIN_SRC sclang
 { Saw.ar(XLine.kr(20000,200,6),0.2) }.play(1);
 #+END_SRC
 
+*** #+name: 40-block
 #+name: 40-block
 #+BEGIN_SRC sclang
 { Saw.ar(XLine.kr(100,15000,6),0.2) }.play(1); // no aliasing
 #+END_SRC
 
+*** #+name: 41-block
 #+name: 41-block
 #+BEGIN_SRC sclang
 { Pulse.ar(XLine.kr(20000,200,6),0.3,0.2) }.play(1);
 #+END_SRC
 
+*** #+name: 42-block
 #+name: 42-block
 #+BEGIN_SRC sclang
 { Pulse.ar(XLine.kr(100,15000,6),0.3,0.2) }.play(1); // no aliasing
 #+END_SRC
 
+*** #+name: 43-block
 #+name: 43-block
 #+BEGIN_SRC sclang
 
@@ -250,6 +296,7 @@
 { Pulse.ar(200, Line.kr(0.01,0.99,8), 0.2) }.play(1);
 #+END_SRC
 
+*** #+name: 44-block
 #+name: 44-block
 #+BEGIN_SRC sclang
 
@@ -257,18 +304,22 @@
 { RLPF.ar(Pulse.ar([100,250],0.5,0.1), XLine.kr(8000,400,5), 0.05) }.play(1);
 #+END_SRC
 
+*** #+name: 45-block
 #+name: 45-block
 #+BEGIN_SRC sclang
 { Klang.ar(`[ [800, 1000, 1200],[0.3, 0.3, 0.3],[pi,pi,pi]], 1, 0) * 0.4}.play(1);
 #+END_SRC
 
+*** #+name: 46-block
 #+name: 46-block
 #+BEGIN_SRC sclang
 
 { Klang.ar(`[ {exprand(400, 2000)}.dup(16), nil, nil ], 1, 0) * 0.04 }.play(1);
 #+END_SRC
 
-** use buffers
+
+* Buffers
+** #+name: 47-block
 #+name: 47-block
 #+BEGIN_SRC sclang
 (
@@ -278,82 +329,98 @@ b.sine1(1.0/(1..6), true, true, true);
 
 #+END_SRC
 
+** #+name: 48-block
 #+name: 48-block
 #+BEGIN_SRC sclang
 { Osc.ar(80, 100, 0, 0.1) }.play;
 #+END_SRC
 
+** #+name: 49-block
 #+name: 49-block
 #+BEGIN_SRC sclang
 b.sine1(1.0/(1..12));
 #+END_SRC
 
+** #+name: 50-block
 #+name: 50-block
 #+BEGIN_SRC sclang
 b.sine1(1.0/(1..24));
 #+END_SRC
 
+** #+name: 51-block
 #+name: 51-block
 #+BEGIN_SRC sclang
 b.sine1(1.0/(1..32));
 #+END_SRC
 
+** #+name: 52-block
 #+name: 52-block
 #+BEGIN_SRC sclang
 b.sine1([1.0/(1,3..12), 0].flop.flat.postln);
 #+END_SRC
 
+** #+name: 53-block
 #+name: 53-block
 #+BEGIN_SRC sclang
 b.sine1([1.0/(1,3..32).squared, 0].flop.flat.postln);
 #+END_SRC
 
+** #+name: 54-block
 #+name: 54-block
 #+BEGIN_SRC sclang
 b.sine1((1.dup(4) ++ 0.dup(8)).scramble.postln);
 #+END_SRC
 
+** #+name: 55-block
 #+name: 55-block
 #+BEGIN_SRC sclang
 b.sine1((1.dup(4) ++ 0.dup(8)).scramble.postln);
 #+END_SRC
 
+** #+name: 56-block
 #+name: 56-block
 #+BEGIN_SRC sclang
 b.sine1((1.dup(4) ++ 0.dup(8)).scramble.postln);
 #+END_SRC
 
+** #+name: 57-block
 #+name: 57-block
 #+BEGIN_SRC sclang
 b.sine1((1.dup(4) ++ 0.dup(8)).scramble.postln);
 #+END_SRC
 
+** #+name: 58-block
 #+name: 58-block
 #+BEGIN_SRC sclang
 b.sine1({1.0.rand2.cubed}.dup(8).round(1e-3).postln);
 #+END_SRC
 
+** #+name: 59-block
 #+name: 59-block
 #+BEGIN_SRC sclang
 b.sine1({1.0.rand2.cubed}.dup(12).round(1e-3).postln);
 #+END_SRC
 
+** #+name: 60-block
 #+name: 60-block
 #+BEGIN_SRC sclang
 b.sine1({1.0.rand2.cubed}.dup(16).round(1e-3).postln);
 #+END_SRC
 
+** #+name: 61-block
 #+name: 61-block
 #+BEGIN_SRC sclang
 b.sine1({1.0.rand2.cubed}.dup(24).round(1e-3).postln);
 
 #+END_SRC
 
+** #+name: 62-block
 #+name: 62-block
 #+BEGIN_SRC sclang
 b.sine1(1.0/(1..6), true, true, true);
 #+END_SRC
 
+** #+name: 63-block
 #+name: 63-block
 #+BEGIN_SRC sclang
 
@@ -362,6 +429,7 @@ b.sine1(1.0/(1..6), true, true, true);
 
 #+END_SRC
 
+** #+name: 64-block
 #+name: 64-block
 #+BEGIN_SRC sclang
 // change buffer as above.
@@ -371,6 +439,7 @@ b.sine1(1.0/(1..6), true, true, true);
 )
 #+END_SRC
 
+** #+name: 65-block
 #+name: 65-block
 #+BEGIN_SRC sclang
 
@@ -387,11 +456,13 @@ b.sine1(1.0/(1..6), true, true, true);
 )
 #+END_SRC
 
+** #+name: 66-block
 #+name: 66-block
 #+BEGIN_SRC sclang
 { VOsc.ar(MouseX.kr(80,87), 120, 0, 0.3) }.play;
 #+END_SRC
 
+** #+name: 67-block
 #+name: 67-block
 #+BEGIN_SRC sclang
 (
@@ -405,12 +476,14 @@ b.sine1(1.0/(1..6), true, true, true);
 )
 #+END_SRC
 
+** #+name: 68-block
 #+name: 68-block
 #+BEGIN_SRC sclang
 // chorusing
 { VOsc3.ar(MouseX.kr(80,87), 120, 121.04, 119.37, 0.2) }.play;
 #+END_SRC
 
+** #+name: 69-block
 #+name: 69-block
 #+BEGIN_SRC sclang
 // chords
@@ -418,11 +491,13 @@ b.sine1(1.0/(1..6), true, true, true);
 { VOsc3.ar(MouseX.kr(80,87), 120, 151.13, 179.42, 0.2) }.play;
 #+END_SRC
 
+** #+name: 70-block
 #+name: 70-block
 #+BEGIN_SRC sclang
 { LFClipNoise.ar(MouseX.kr(200, 10000, 1), 0.125) }.play(1);
 #+END_SRC
 
+** #+name: 71-block
 #+name: 71-block
 #+BEGIN_SRC sclang
 { LFNoise0.ar(MouseX.kr(200, 10000, 1), 0.25) }.play(1);
@@ -430,149 +505,177 @@ b.sine1(1.0/(1..6), true, true, true);
 { LFNoise1.ar(MouseX.kr(200, 10000, 1), 0.25) }.play(1);
 #+END_SRC
 
+** #+name: 72-block
 #+name: 72-block
 #+BEGIN_SRC sclang
 { LFNoise2.ar(MouseX.kr(200, 10000, 1), 0.25) }.play(1);
 #+END_SRC
 
+** #+name: 73-block
 #+name: 73-block
 #+BEGIN_SRC sclang
 // used as controls
 { LFPar.ar(LFClipNoise.kr(MouseX.kr(0.5, 64, 1), 200, 400), 0, 0.2) }.play;
 #+END_SRC
 
+** #+name: 74-block
 #+name: 74-block
 #+BEGIN_SRC sclang
 { LFPar.ar(LFNoise0.kr(MouseX.kr(0.5, 64, 1), 200, 400), 0, 0.2) }.play;
 #+END_SRC
 
+** #+name: 75-block
 #+name: 75-block
 #+BEGIN_SRC sclang
 { LFPar.ar(LFNoise1.kr(MouseX.kr(0.5, 64, 1), 200, 400), 0, 0.2) }.play;
 #+END_SRC
 
+** #+name: 76-block
 #+name: 76-block
 #+BEGIN_SRC sclang
 { LFPar.ar(LFNoise2.kr(MouseX.kr(0.5, 64, 1), 200, 400), 0, 0.2) }.play;
 
 #+END_SRC
 
+** #+name: 77-block
 #+name: 77-block
 #+BEGIN_SRC sclang
 { ClipNoise.ar(0.2) }.play(1);
 #+END_SRC
 
+** #+name: 78-block
 #+name: 78-block
 #+BEGIN_SRC sclang
   // { WhiteNoise.ar(0.2) }.play(1);
   { WhiteNoise.ar(0.01) }.play(1);
 #+END_SRC
 
+** #+name: 79-block
 #+name: 79-block
 #+BEGIN_SRC sclang
   { PinkNoise.ar(0.1) }.play(1);
   // { PinkNoise.ar(0.4) }.play(1);
 #+END_SRC
 
+** #+name: 80-block
 #+name: 80-block
 #+BEGIN_SRC sclang
 { BrownNoise.ar(0.2) }.play(1);
 #+END_SRC
 
+** #+name: 81-block
 #+name: 81-block
 #+BEGIN_SRC sclang
 { GrayNoise.ar(0.2) }.play(1);
 
 #+END_SRC
 
+** #+name: 82-block
 #+name: 82-block
 #+BEGIN_SRC sclang
 { Dust.ar(MouseX.kr(1,10000,1), 0.4) }.play;
 #+END_SRC
 
+** #+name: 83-block
 #+name: 83-block
 #+BEGIN_SRC sclang
 { Dust2.ar(MouseX.kr(1,10000,1), 0.4) }.play;
 
 #+END_SRC
 
+** #+name: 84-block
 #+name: 84-block
 #+BEGIN_SRC sclang
 { Crackle.ar(MouseX.kr(1,2), 0.5) }.play(1);
 #+END_SRC
 
+** #+name: 85-block
 #+name: 85-block
 #+BEGIN_SRC sclang
 { LPF.ar(WhiteNoise.ar, MouseX.kr(1e2,2e4,1), 0.2) }.play(1);
 #+END_SRC
 
+** #+name: 86-block
 #+name: 86-block
 #+BEGIN_SRC sclang
 { HPF.ar(WhiteNoise.ar, MouseX.kr(1e2,2e4,1), 0.2) }.play(1);
 #+END_SRC
 
+** #+name: 87-block
 #+name: 87-block
 #+BEGIN_SRC sclang
 { LPF.ar(Saw.ar(100), MouseX.kr(1e2,2e4,1), 0.2) }.play(1);
 #+END_SRC
 
+** #+name: 88-block
 #+name: 88-block
 #+BEGIN_SRC sclang
 { HPF.ar(Saw.ar(100), MouseX.kr(1e2,2e4,1), 0.2) }.play(1);
 #+END_SRC
 
+** #+name: 89-block
 #+name: 89-block
 #+BEGIN_SRC sclang
 { BPF.ar(WhiteNoise.ar, MouseX.kr(1e2,2e4,1), 0.4, 0.4) }.play(1);
 #+END_SRC
 
+** #+name: 90-block
 #+name: 90-block
 #+BEGIN_SRC sclang
 { BRF.ar(WhiteNoise.ar, MouseX.kr(1e2,2e4,1), 0.4, 0.2) }.play(1);
 #+END_SRC
 
+** #+name: 91-block
 #+name: 91-block
 #+BEGIN_SRC sclang
 { BPF.ar(Saw.ar(100), MouseX.kr(1e2,2e4,1), 0.4, 0.4) }.play(1);
 #+END_SRC
 
+** #+name: 92-block
 #+name: 92-block
 #+BEGIN_SRC sclang
 { BRF.ar(Saw.ar(100), MouseX.kr(1e2,2e4,1), 0.4, 0.2) }.play(1);
 #+END_SRC
 
+** #+name: 93-block
 #+name: 93-block
 #+BEGIN_SRC sclang
 // modulating the bandwidth
 { BPF.ar(WhiteNoise.ar, 3000, MouseX.kr(0.01,0.7,1), 0.4) }.play(1);
 #+END_SRC
 
+** #+name: 94-block
 #+name: 94-block
 #+BEGIN_SRC sclang
 { RLPF.ar(WhiteNoise.ar, MouseX.kr(1e2,2e4,1), 0.2, 0.2) }.play(1);
 #+END_SRC
 
+** #+name: 95-block
 #+name: 95-block
 #+BEGIN_SRC sclang
 { RHPF.ar(WhiteNoise.ar, MouseX.kr(1e2,2e4,1), 0.2, 0.2) }.play(1);
 #+END_SRC
 
+** #+name: 96-block
 #+name: 96-block
 #+BEGIN_SRC sclang
 { RLPF.ar(Saw.ar(100), MouseX.kr(1e2,2e4,1), 0.2, 0.2) }.play(1);
 #+END_SRC
 
+** #+name: 97-block
 #+name: 97-block
 #+BEGIN_SRC sclang
 { RHPF.ar(Saw.ar(100), MouseX.kr(1e2,2e4,1), 0.2, 0.2) }.play(1);
 #+END_SRC
 
+** #+name: 98-block
 #+name: 98-block
 #+BEGIN_SRC sclang
 // modulate frequency
 { Resonz.ar(WhiteNoise.ar(0.5), XLine.kr(1000,8000,10), 0.05) }.play(1);
 #+END_SRC
 
+** #+name: 99-block
 #+name: 99-block
 #+BEGIN_SRC sclang
 
@@ -581,62 +684,73 @@ b.sine1(1.0/(1..6), true, true, true);
 
 #+END_SRC
 
+** #+name: 100-block
 #+name: 100-block
 #+BEGIN_SRC sclang
 // modulate bandwidth opposite direction
 { Resonz.ar(WhiteNoise.ar(0.5), 2000, XLine.kr(0.001, 1, 8)) }.play(1);
 #+END_SRC
 
+** #+name: 101-block
 #+name: 101-block
 #+BEGIN_SRC sclang
 { Ringz.ar(Dust.ar(3, 0.3), 2000, 2) }.play;
 #+END_SRC
 
+** #+name: 102-block
 #+name: 102-block
 #+BEGIN_SRC sclang
 { Ringz.ar(WhiteNoise.ar(0.005), 2000, 0.5) }.play(1);
 #+END_SRC
 
+** #+name: 103-block
 #+name: 103-block
 #+BEGIN_SRC sclang
 // modulate frequency
 { Ringz.ar(WhiteNoise.ar(0.005), XLine.kr(100,3000,10), 0.5) }.play;
 #+END_SRC
 
+** #+name: 104-block
 #+name: 104-block
 #+BEGIN_SRC sclang
 { Ringz.ar(Impulse.ar(6, 0, 0.3),  XLine.kr(100,3000,10), 0.5) }.play;
 
 #+END_SRC
 
+** #+name: 105-block
 #+name: 105-block
 #+BEGIN_SRC sclang
 // modulate ring time
 { Ringz.ar(Impulse.ar(6, 0, 0.3), 2000, XLine.kr(0.04, 4, 8)) }.play;
 #+END_SRC
 
+** #+name: 106-block
 #+name: 106-block
 #+BEGIN_SRC sclang
 { OnePole.ar(WhiteNoise.ar(0.5), MouseX.kr(-0.99, 0.99)) }.play(1);
 #+END_SRC
 
+** #+name: 107-block
 #+name: 107-block
 #+BEGIN_SRC sclang
 { OneZero.ar(WhiteNoise.ar(0.5), MouseX.kr(-0.49, 0.49)) }.play(1);
 #+END_SRC
 
+** #+name: 108-block
 #+name: 108-block
 #+BEGIN_SRC sclang
 // a signal with impulse noise.
 { Saw.ar(500, 0.1) + Dust2.ar(100, 0.9) }.play(1);
 #+END_SRC
 
+** #+name: 109-block
 #+name: 109-block
 #+BEGIN_SRC sclang
 // after applying median filter
 { Median.ar(3, Saw.ar(500, 0.1) + Dust2.ar(100, 0.9)) }.play(1);
 #+END_SRC
 
+** #+name: 110-block
 #+name: 110-block
 #+BEGIN_SRC sclang
 
@@ -644,111 +758,132 @@ b.sine1(1.0/(1..6), true, true, true);
 { Saw.ar(500, 0.1) + Dust2.ar(100, 0.9) }.play(1);
 #+END_SRC
 
+** #+name: 111-block
 #+name: 111-block
 #+BEGIN_SRC sclang
 // after applying slew rate limiter
 { Slew.ar(Saw.ar(500, 0.1) + Dust2.ar(100, 0.9),1000,1000) }.play(1);
 #+END_SRC
 
+** #+name: 112-block
 #+name: 112-block
 #+BEGIN_SRC sclang
 { Formlet.ar(Impulse.ar(MouseX.kr(2,300,1), 0, 0.4), 800, 0.01, 0.1) }.play;
 #+END_SRC
 
+** #+name: 113-block
 #+name: 113-block
 #+BEGIN_SRC sclang
 { Klank.ar(`[[200, 671, 1153, 1723], nil, [1, 1, 1, 1]], Impulse.ar(2, 0, 0.1)) }.play;
 #+END_SRC
 
+** #+name: 114-block
 #+name: 114-block
 #+BEGIN_SRC sclang
 { Klank.ar(`[[200, 671, 1153, 1723], nil, [1, 1, 1, 1]], Dust.ar(8, 0.1)) }.play;
 #+END_SRC
 
+** #+name: 115-block
 #+name: 115-block
 #+BEGIN_SRC sclang
 
 { Klank.ar(`[[200, 671, 1153, 1723], nil, [1, 1, 1, 1]], PinkNoise.ar(0.007)) }.play;
 #+END_SRC
 
+** #+name: 116-block
 #+name: 116-block
 #+BEGIN_SRC sclang
 
 { Klank.ar(`[ {exprand(200, 4000)}.dup(12), nil, nil ], PinkNoise.ar(0.007)) }.play(1);
 #+END_SRC
 
+** #+name: 117-block
 #+name: 117-block
 #+BEGIN_SRC sclang
 
 { Klank.ar(`[ (1..13)*200, 1/(1..13), nil ], PinkNoise.ar(0.01)) }.play(1);
 #+END_SRC
 
+** #+name: 118-block
 #+name: 118-block
 #+BEGIN_SRC sclang
 
 { Klank.ar(`[ (1,3..13)*200, 1/(1,3..13), nil ], PinkNoise.ar(0.01)) }.play(1);
 #+END_SRC
 
+** #+name: 119-block
 #+name: 119-block
 #+BEGIN_SRC sclang
 { SinOsc.ar(300, 0, 0.2) }.play(1);
 #+END_SRC
 
+** #+name: 120-block
 #+name: 120-block
 #+BEGIN_SRC sclang
 { SinOsc.ar(300, 0, 0.2).abs }.play(1);
 #+END_SRC
 
+** #+name: 121-block
 #+name: 121-block
 #+BEGIN_SRC sclang
 { SinOsc.ar(300, 0, 0.2).max(0) }.play(1);
 #+END_SRC
 
+** #+name: 122-block
 #+name: 122-block
 #+BEGIN_SRC sclang
 { SinOsc.ar(300, 0).squared * 0.2 }.play(1);
 #+END_SRC
 
+** #+name: 123-block
 #+name: 123-block
 #+BEGIN_SRC sclang
 { SinOsc.ar(300, 0).cubed * 0.2 }.play(1);
 #+END_SRC
 
+** #+name: 124-block
 #+name: 124-block
 #+BEGIN_SRC sclang
 { SinOsc.ar(300, 0, MouseX.kr(0.1,80,1)).distort * 0.2 }.play(1);
 #+END_SRC
 
+** #+name: 125-block
 #+name: 125-block
 #+BEGIN_SRC sclang
 { SinOsc.ar(300, 0, MouseX.kr(0.1,80,1)).softclip * 0.2 }.play(1);
 #+END_SRC
 
+** #+name: 126-block
 #+name: 126-block
 #+BEGIN_SRC sclang
 { SinOsc.ar(300, 0, MouseX.kr(0.1,80,1)).clip2(1) * 0.2 }.play(1);
 #+END_SRC
 
+** #+name: 127-block
 #+name: 127-block
 #+BEGIN_SRC sclang
 { SinOsc.ar(300, 0, MouseX.kr(0.1,80,1)).fold2(1) * 0.2 }.play(1);
 #+END_SRC
 
+** #+name: 128-block
 #+name: 128-block
 #+BEGIN_SRC sclang
 { SinOsc.ar(300, 0, MouseX.kr(0.1,80,1)).wrap2(1) * 0.2 }.play(1);
 #+END_SRC
 
+** #+name: 129-block
 #+name: 129-block
 #+BEGIN_SRC sclang
 { SinOsc.ar(300, 0, MouseX.kr(0.1,80,1)).wrap2(1) * 0.2 }.play(1);
 #+END_SRC
 
+** #+name: 130-block
 #+name: 130-block
 #+BEGIN_SRC sclang
 { SinOsc.ar(200, 0, 0.2).scaleneg(MouseX.kr(-1,1)) }.play(1);
 #+END_SRC
 
+** #+name: 131-block
 #+name: 131-block
 #+BEGIN_SRC sclang
 (
@@ -760,6 +895,7 @@ b.sine1(1.0/(1..6), true, true, true);
 )
 #+END_SRC
 
+** #+name: 132-block
 #+name: 132-block
 #+BEGIN_SRC sclang
 s.sendMsg(\b_alloc, 80, 1024); // allocate table
@@ -768,22 +904,26 @@ s.listSendMsg([\b_gen, 80, \cheby, 7] ++ {1.0.rand2.squared}.dup(6));
 
 #+END_SRC
 
+** #+name: 133-block
 #+name: 133-block
 #+BEGIN_SRC sclang
 { Shaper.ar(80, SinOsc.ar(600, 0, MouseX.kr(0,1))) * 0.3; }.play(1);
 #+END_SRC
 
+** #+name: 134-block
 #+name: 134-block
 #+BEGIN_SRC sclang
 
 s.listSendMsg([\b_gen, 80, \cheby, 7] ++ {1.0.rand2.squared}.dup(6));
 #+END_SRC
 
+** #+name: 135-block
 #+name: 135-block
 #+BEGIN_SRC sclang
 s.listSendMsg([\b_gen, 80, \cheby, 7] ++ {1.0.rand2.squared}.dup(6));
 #+END_SRC
 
+** #+name: 136-block
 #+name: 136-block
 #+BEGIN_SRC sclang
 (
@@ -796,52 +936,62 @@ s.boot;
 )
 #+END_SRC
 
+** #+name: 137-block
 #+name: 137-block
 #+BEGIN_SRC sclang
 { Pan2.ar(BrownNoise.ar, MouseX.kr(-1,1), 0.3) }.play(2);
 #+END_SRC
 
+** #+name: 138-block
 #+name: 138-block
 #+BEGIN_SRC sclang
 { Pan2.ar(BrownNoise.ar, SinOsc.kr(0.2), 0.3) }.play(2);
 #+END_SRC
 
+** #+name: 139-block
 #+name: 139-block
 #+BEGIN_SRC sclang
 { LinPan2.ar(BrownNoise.ar, MouseX.kr(-1,1), 0.3) }.play(2);
 #+END_SRC
 
+** #+name: 140-block
 #+name: 140-block
 #+BEGIN_SRC sclang
 { LinPan2.ar(BrownNoise.ar, SinOsc.kr(0.2), 0.3) }.play(2);
 #+END_SRC
 
+** #+name: 141-block
 #+name: 141-block
 #+BEGIN_SRC sclang
 { Balance2.ar(BrownNoise.ar, BrownNoise.ar, MouseX.kr(-1,1), 0.3) }.play(2);
 #+END_SRC
 
+** #+name: 142-block
 #+name: 142-block
 #+BEGIN_SRC sclang
 { Pan4.ar(BrownNoise.ar, MouseX.kr(-1,1), MouseY.kr(1,-1), 0.3) }.play(4);
 #+END_SRC
 
+** #+name: 143-block
 #+name: 143-block
 #+BEGIN_SRC sclang
 { PanAz.ar(5, BrownNoise.ar, MouseX.kr(-1,1), 0.3, 2) }.play(5);
 #+END_SRC
 
+** #+name: 144-block
 #+name: 144-block
 #+BEGIN_SRC sclang
 // change width to 3
 { PanAz.ar(5, BrownNoise.ar, MouseX.kr(-1,1), 0.3, 3) }.play(5);
 #+END_SRC
 
+** #+name: 145-block
 #+name: 145-block
 #+BEGIN_SRC sclang
 { XFade2.ar(BrownNoise.ar, SinOsc.ar(500), MouseX.kr(-1,1), 0.3) }.play(1);
 #+END_SRC
 
+** #+name: 146-block
 #+name: 146-block
 #+BEGIN_SRC sclang
 (
@@ -861,6 +1011,7 @@ s.boot;
 )
 #+END_SRC
 
+** #+name: 147-block
 #+name: 147-block
 #+BEGIN_SRC sclang
 (
@@ -875,6 +1026,7 @@ s.boot;
 )
 #+END_SRC
 
+** #+name: 148-block
 #+name: 148-block
 #+BEGIN_SRC sclang
 (
@@ -889,6 +1041,7 @@ s.boot;
 )
 #+END_SRC
 
+** #+name: 149-block
 #+name: 149-block
 #+BEGIN_SRC sclang
 (
@@ -901,6 +1054,7 @@ s.boot;
 )
 #+END_SRC
 
+** #+name: 150-block
 #+name: 150-block
 #+BEGIN_SRC sclang
 (
@@ -913,6 +1067,7 @@ DelayN.ar(z, 0.1, 0.1, 1, z); // input is mixed with delay via the add input
 )
 #+END_SRC
 
+** #+name: 151-block
 #+name: 151-block
 #+BEGIN_SRC sclang
 (
@@ -923,12 +1078,14 @@ DelayL.ar(z, 0.3, MouseX.kr(0,0.3), 1, z); // input is mixed with delay via the 
 )
 #+END_SRC
 
+** #+name: 152-block
 #+name: 152-block
 #+BEGIN_SRC sclang
 // used as an echo.
 { CombN.ar(Decay.ar(Dust.ar(1,0.5), 0.2, WhiteNoise.ar), 0.2, 0.2, 3) }.play;
 #+END_SRC
 
+** #+name: 153-block
 #+name: 153-block
 #+BEGIN_SRC sclang
 
@@ -937,18 +1094,21 @@ DelayL.ar(z, 0.3, MouseX.kr(0,0.3), 1, z); // input is mixed with delay via the 
 { CombN.ar(WhiteNoise.ar(0.02), 0.01, XLine.kr(0.0001, 0.01, 20), 0.2) }.play(1);
 #+END_SRC
 
+** #+name: 154-block
 #+name: 154-block
 #+BEGIN_SRC sclang
 
 { CombL.ar(WhiteNoise.ar(0.02), 0.01, XLine.kr(0.0001, 0.01, 20), 0.2) }.play(1);
 #+END_SRC
 
+** #+name: 155-block
 #+name: 155-block
 #+BEGIN_SRC sclang
 
 { CombC.ar(WhiteNoise.ar(0.02), 0.01, XLine.kr(0.0001, 0.01, 20), 0.2) }.play(1);
 #+END_SRC
 
+** #+name: 156-block
 #+name: 156-block
 #+BEGIN_SRC sclang
 
@@ -956,39 +1116,46 @@ DelayL.ar(z, 0.3, MouseX.kr(0,0.3), 1, z); // input is mixed with delay via the 
 { CombN.ar(WhiteNoise.ar(0.02), 0.01, XLine.kr(0.0001, 0.01, 20), -0.2) }.play(1);
 #+END_SRC
 
+** #+name: 157-block
 #+name: 157-block
 #+BEGIN_SRC sclang
 
 { CombL.ar(WhiteNoise.ar(0.02), 0.01, XLine.kr(0.0001, 0.01, 20), -0.2) }.play(1);
 #+END_SRC
 
+** #+name: 158-block
 #+name: 158-block
 #+BEGIN_SRC sclang
 
 { CombC.ar(WhiteNoise.ar(0.02), 0.01, XLine.kr(0.0001, 0.01, 20), -0.2) }.play(1);
 #+END_SRC
 
+** #+name: 159-block
 #+name: 159-block
 #+BEGIN_SRC sclang
 
 { CombC.ar(Decay.ar(Dust.ar(1,0.1), 0.2, WhiteNoise.ar), 1/100, 1/100, 3) }.play;
 #+END_SRC
 
+** #+name: 160-block
 #+name: 160-block
 #+BEGIN_SRC sclang
 { CombC.ar(Decay.ar(Dust.ar(1,0.1), 0.2, WhiteNoise.ar), 1/200, 1/200, 3) }.play;
 #+END_SRC
 
+** #+name: 161-block
 #+name: 161-block
 #+BEGIN_SRC sclang
 { CombC.ar(Decay.ar(Dust.ar(1,0.1), 0.2, WhiteNoise.ar), 1/300, 1/300, 3) }.play;
 #+END_SRC
 
+** #+name: 162-block
 #+name: 162-block
 #+BEGIN_SRC sclang
 { CombC.ar(Decay.ar(Dust.ar(1,0.1), 0.2, WhiteNoise.ar), 1/400, 1/400, 3) }.play;
 #+END_SRC
 
+** #+name: 163-block
 #+name: 163-block
 #+BEGIN_SRC sclang
 (
@@ -1001,6 +1168,7 @@ DelayL.ar(z, 0.3, MouseX.kr(0,0.3), 1, z); // input is mixed with delay via the 
 )
 #+END_SRC
 
+** #+name: 164-block
 #+name: 164-block
 #+BEGIN_SRC sclang
 // read sound
@@ -1010,6 +1178,7 @@ b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 
 #+END_SRC
 
+** #+name: 165-block
 #+name: 165-block
 #+BEGIN_SRC sclang
 // loop is true
@@ -1017,6 +1186,7 @@ b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 { PlayBuf.ar(1,b, BufRateScale.kr(b), loop:1) }.play(1);
 #+END_SRC
 
+** #+name: 166-block
 #+name: 166-block
 #+BEGIN_SRC sclang
 // trigger one shot on each pulse
@@ -1030,6 +1200,7 @@ b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 
 #+END_SRC
 
+** #+name: 167-block
 #+name: 167-block
 #+BEGIN_SRC sclang
 // trigger one shot on each pulse
@@ -1042,6 +1213,7 @@ b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 )
 #+END_SRC
 
+** #+name: 168-block
 #+name: 168-block
 #+BEGIN_SRC sclang
 // mouse control of trigger rate and startpos
@@ -1055,6 +1227,7 @@ b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 
 #+END_SRC
 
+** #+name: 169-block
 #+name: 169-block
 #+BEGIN_SRC sclang
 
@@ -1069,6 +1242,7 @@ b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 
 #+END_SRC
 
+** #+name: 170-block
 #+name: 170-block
 #+BEGIN_SRC sclang
 
@@ -1084,6 +1258,7 @@ b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 
 #+END_SRC
 
+** #+name: 171-block
 #+name: 171-block
 #+BEGIN_SRC sclang
 // zig zag around sound
@@ -1097,6 +1272,7 @@ b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 
 #+END_SRC
 
+** #+name: 172-block
 #+name: 172-block
 #+BEGIN_SRC sclang
 
@@ -1105,6 +1281,7 @@ b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 b.free;
 #+END_SRC
 
+** #+name: 173-block
 #+name: 173-block
 #+BEGIN_SRC sclang
 // read sound
@@ -1121,6 +1298,7 @@ b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 
 #+END_SRC
 
+** #+name: 174-block
 #+name: 174-block
 #+BEGIN_SRC sclang
 
@@ -1138,6 +1316,7 @@ b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 
 #+END_SRC
 
+** #+name: 175-block
 #+name: 175-block
 #+BEGIN_SRC sclang
 
@@ -1156,6 +1335,7 @@ b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 
 #+END_SRC
 
+** #+name: 176-block
 #+name: 176-block
 #+BEGIN_SRC sclang
 
@@ -1173,6 +1353,7 @@ b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 
 #+END_SRC
 
+** #+name: 177-block
 #+name: 177-block
 #+BEGIN_SRC sclang
 
@@ -1192,6 +1373,7 @@ b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 
 #+END_SRC
 
+** #+name: 178-block
 #+name: 178-block
 #+BEGIN_SRC sclang
 
@@ -1211,6 +1393,7 @@ b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 
 #+END_SRC
 
+** #+name: 179-block
 #+name: 179-block
 #+BEGIN_SRC sclang
 
@@ -1228,6 +1411,7 @@ b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 
 #+END_SRC
 
+** #+name: 180-block
 #+name: 180-block
 #+BEGIN_SRC sclang
 
@@ -1245,6 +1429,7 @@ b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 
 #+END_SRC
 
+** #+name: 181-block
 #+name: 181-block
 #+BEGIN_SRC sclang
 
@@ -1260,6 +1445,7 @@ b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 
 #+END_SRC
 
+** #+name: 182-block
 #+name: 182-block
 #+BEGIN_SRC sclang
 
@@ -1267,6 +1453,7 @@ b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 b.free;
 #+END_SRC
 
+** #+name: 183-block
 #+name: 183-block
 #+BEGIN_SRC sclang
 ( // using default window
@@ -1283,6 +1470,7 @@ b.free;
 
 #+END_SRC
 
+** #+name: 184-block
 #+name: 184-block
 #+BEGIN_SRC sclang
 
@@ -1300,41 +1488,49 @@ b = Buffer.sendCollection(s, Env([0, 1, 0], [0.5, 0.5], [8, -8]).discretize, 1);
 )
 #+END_SRC
 
+** #+name: 185-block
 #+name: 185-block
 #+BEGIN_SRC sclang
 { WhiteNoise.ar * Decay.ar(Impulse.ar(1), 0.9, 0.2) }.play;
 #+END_SRC
 
+** #+name: 186-block
 #+name: 186-block
 #+BEGIN_SRC sclang
 { WhiteNoise.ar * Decay.ar(Dust.ar(3), 0.9, 0.2) }.play;
 #+END_SRC
 
+** #+name: 187-block
 #+name: 187-block
 #+BEGIN_SRC sclang
 { SinOsc.ar(Decay.ar(Dust.ar(4), 0.5, 1000, 400), 0, 0.2) }.play;
 #+END_SRC
 
+** #+name: 188-block
 #+name: 188-block
 #+BEGIN_SRC sclang
 { WhiteNoise.ar * Decay2.ar(Impulse.ar(1), 0.2, 0.9, 0.2) }.play;
 #+END_SRC
 
+** #+name: 189-block
 #+name: 189-block
 #+BEGIN_SRC sclang
 { WhiteNoise.ar * Decay2.ar(Dust.ar(3), 0.2, 0.9, 0.2) }.play;
 #+END_SRC
 
+** #+name: 190-block
 #+name: 190-block
 #+BEGIN_SRC sclang
 { SinOsc.ar(Lag.ar(LFPulse.ar(2,0,0.5,800,400), MouseX.kr(0,0.5)), 0, 0.2) }.play;
 #+END_SRC
 
+** #+name: 191-block
 #+name: 191-block
 #+BEGIN_SRC sclang
 { SinOsc.ar(Integrator.ar(Dust2.ar(8), 0.99999, 200, 800), 0, 0.2) }.play(1)
 #+END_SRC
 
+** #+name: 192-block
 #+name: 192-block
 #+BEGIN_SRC sclang
 // amplitude determined by amplitude of trigger
@@ -1342,16 +1538,19 @@ b = Buffer.sendCollection(s, Env([0, 1, 0], [0.5, 0.5], [8, -8]).discretize, 1);
 { Trig.ar(Dust.ar(2), 0.2) * FSinOsc.ar(800, 0, 0.4) }.play;
 #+END_SRC
 
+** #+name: 193-block
 #+name: 193-block
 #+BEGIN_SRC sclang
 // amplitude always the same.
 { Trig1.ar(Dust.ar(2), 0.2) * FSinOsc.ar(800, 0, 0.4) }.play
 #+END_SRC
 
+** #+name: 194-block
 #+name: 194-block
 #+BEGIN_SRC sclang
 #+END_SRC
 
+** #+name: 195-block
 #+name: 195-block
 #+BEGIN_SRC sclang
 (
@@ -1364,21 +1563,25 @@ b = Buffer.sendCollection(s, Env([0, 1, 0], [0.5, 0.5], [8, -8]).discretize, 1);
 )
 #+END_SRC
 
+** #+name: 196-block
 #+name: 196-block
 #+BEGIN_SRC sclang
 { Blip.ar(Latch.ar(WhiteNoise.ar, Impulse.ar(9)) * 400 + 500, 4, 0.2) }.play;
 #+END_SRC
 
+** #+name: 197-block
 #+name: 197-block
 #+BEGIN_SRC sclang
 { Blip.ar(Latch.ar(SinOsc.ar(0.3), Impulse.ar(9)) * 400 + 500, 4, 0.2) }.play;
 #+END_SRC
 
+** #+name: 198-block
 #+name: 198-block
 #+BEGIN_SRC sclang
 { Blip.ar(Gate.ar(LFNoise2.ar(40), LFPulse.ar(1)) * 400 + 500, 4, 0.2) }.play;
 #+END_SRC
 
+** #+name: 199-block
 #+name: 199-block
 #+BEGIN_SRC sclang
 (
@@ -1391,6 +1594,7 @@ SinOsc.ar(
 )
 #+END_SRC
 
+** #+name: 200-block
 #+name: 200-block
 #+BEGIN_SRC sclang
 (
@@ -1405,24 +1609,28 @@ SinOsc.ar(
 )
 #+END_SRC
 
+** #+name: 201-block
 #+name: 201-block
 #+BEGIN_SRC sclang
 { EnvGen.kr(Env.perc, doneAction:2) * SinOsc.ar(880,0,0.2) }.play;
 { EnvGen.kr(Env.perc(1,0.005,1,4), doneAction:2) * SinOsc.ar(880,0,0.2) }.play;
 #+END_SRC
 
+** #+name: 202-block
 #+name: 202-block
 #+BEGIN_SRC sclang
 
 { EnvGen.kr(Env.perc, Impulse.kr(2)) * SinOsc.ar(880,0,0.2) }.play;
 #+END_SRC
 
+** #+name: 203-block
 #+name: 203-block
 #+BEGIN_SRC sclang
 { EnvGen.kr(Env.perc, Dust.kr(3)) * SinOsc.ar(880,0,0.2) }.play;
 
 #+END_SRC
 
+** #+name: 204-block
 #+name: 204-block
 #+BEGIN_SRC sclang
 // for sustain envelopes a gate is required
@@ -1430,12 +1638,14 @@ z = { arg gate=1; EnvGen.kr(Env.adsr, gate, doneAction:2) * SinOsc.ar(880,0,0.2)
 
 #+END_SRC
 
+** #+name: 205-block
 #+name: 205-block
 #+BEGIN_SRC sclang
 z.release;
 
 #+END_SRC
 
+** #+name: 206-block
 #+name: 206-block
 #+BEGIN_SRC sclang
 (
@@ -1452,11 +1662,13 @@ z = { arg gate=1;
 
 #+END_SRC
 
+** #+name: 207-block
 #+name: 207-block
 #+BEGIN_SRC sclang
 z.release;
 #+END_SRC
 
+** #+name: 208-block
 #+name: 208-block
 #+BEGIN_SRC sclang
 // alloc a buffer for the FFT
@@ -1464,6 +1676,7 @@ b = Buffer.alloc(s,2048,1);
 
 #+END_SRC
 
+** #+name: 209-block
 #+name: 209-block
 #+BEGIN_SRC sclang
 // read a sound
@@ -1472,6 +1685,7 @@ c = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 
 #+END_SRC
 
+** #+name: 210-block
 #+name: 210-block
 #+BEGIN_SRC sclang
 (
@@ -1486,6 +1700,7 @@ c = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 
 #+END_SRC
 
+** #+name: 211-block
 #+name: 211-block
 #+BEGIN_SRC sclang
 
@@ -1502,6 +1717,7 @@ c = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 
 #+END_SRC
 
+** #+name: 212-block
 #+name: 212-block
 #+BEGIN_SRC sclang
 
@@ -1518,6 +1734,7 @@ c = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 
 #+END_SRC
 
+** #+name: 213-block
 #+name: 213-block
 #+BEGIN_SRC sclang
 
@@ -1534,6 +1751,7 @@ c = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 
 #+END_SRC
 
+** #+name: 214-block
 #+name: 214-block
 #+BEGIN_SRC sclang
 
@@ -1551,6 +1769,7 @@ c = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 
 #+END_SRC
 
+** #+name: 215-block
 #+name: 215-block
 #+BEGIN_SRC sclang
 
@@ -1567,6 +1786,7 @@ c = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 
 #+END_SRC
 
+** #+name: 216-block
 #+name: 216-block
 #+BEGIN_SRC sclang
 
@@ -1582,12 +1802,14 @@ c = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 )
 #+END_SRC
 
+** #+name: 217-block
 #+name: 217-block
 #+BEGIN_SRC sclang
 { var x; x = BrownNoise.ar(0.2); [x,x] }.play(2); // correlated
 { {BrownNoise.ar(0.2)}.dup }.play(2); // not correlated
 #+END_SRC
 
+** #+name: 218-block
 #+name: 218-block
 #+BEGIN_SRC sclang
 
@@ -1596,6 +1818,7 @@ c = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 { var x; x = LPF.ar(BrownNoise.ar(0.2), MouseX.kr(100,10000)); [x,x] }.play(2);
 #+END_SRC
 
+** #+name: 219-block
 #+name: 219-block
 #+BEGIN_SRC sclang
 // not correlated
@@ -1603,12 +1826,14 @@ c = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 { LPF.ar({BrownNoise.ar(0.2)}.dup, MouseX.kr(100,10000)) }.play(2);
 #+END_SRC
 
+** #+name: 220-block
 #+name: 220-block
 #+BEGIN_SRC sclang
 
 
 #+END_SRC
 
+** #+name: 221-block
 #+name: 221-block
 #+BEGIN_SRC sclang
 // correlated
@@ -1621,12 +1846,14 @@ c = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 
 #+END_SRC
 
+** #+name: 222-block
 #+name: 222-block
 #+BEGIN_SRC sclang
 // not correlated
 { Klank.ar(`[[200, 671, 1153, 1723], nil, [1, 1, 1, 1]], PinkNoise.ar([7e-3,7e-3])) }.play(2);
 #+END_SRC
 
+** #+name: 223-block
 #+name: 223-block
 #+BEGIN_SRC sclang
 
@@ -1634,12 +1861,14 @@ c = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 { var x; x = Mix.ar(VarSaw.ar([100,101], 0, 0.1, 0.2)); [x,x] }.play(2);
 #+END_SRC
 
+** #+name: 224-block
 #+name: 224-block
 #+BEGIN_SRC sclang
 // two waves coming out each speaker independantly
 { VarSaw.ar([100,101], 0, 0.1, 0.2 * 1.414) }.play(2); // * 1.414 to compensate for power
 #+END_SRC
 
+** #+name: 225-block
 #+name: 225-block
 #+BEGIN_SRC sclang
 
@@ -1648,6 +1877,7 @@ c = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 { var x; x = LFTri.ar(1000,0,Decay2.ar(Impulse.ar(4,0,0.2),0.004,0.2)); [x,x]}.play(2);
 #+END_SRC
 
+** #+name: 226-block
 #+name: 226-block
 #+BEGIN_SRC sclang
 
@@ -1662,6 +1892,7 @@ c = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 
 #+END_SRC
 
+** #+name: 227-block
 #+name: 227-block
 #+BEGIN_SRC sclang
 
@@ -1677,6 +1908,7 @@ c = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 
 #+END_SRC
 
+** #+name: 228-block
 #+name: 228-block
 #+BEGIN_SRC sclang
 
@@ -1688,6 +1920,7 @@ c = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 )
 #+END_SRC
 
+** #+name: 229-block
 #+name: 229-block
 #+BEGIN_SRC sclang
 (
@@ -1704,6 +1937,7 @@ c = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 
 #+END_SRC
 
+** #+name: 230-block
 #+name: 230-block
 #+BEGIN_SRC sclang
 
@@ -1721,6 +1955,7 @@ c = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 
 #+END_SRC
 
+** #+name: 231-block
 #+name: 231-block
 #+BEGIN_SRC sclang
 
