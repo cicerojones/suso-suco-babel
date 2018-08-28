@@ -564,7 +564,7 @@ code::
 *** subsection:: Low Pass, High Pass
 
 definitionlist::
-**** ::Classes/LPF::, link::Classes/HPF:: - 12 dB / octave             :args:
+**** ::Classes/LPF::, link::Classes/HPF:: - 12 dB / octave :args:in:freq:mul:add:
 || arguments: code:: in, freq, mul, add ::
 code::
 #+BEGIN_SRC sclang
@@ -588,7 +588,7 @@ code::
 *** subsection:: Band Pass, Band Cut
 
 definitionlist::
-**** ::Classes/BPF::, link::Classes/BRF:: - 12 dB / octave             :args:
+**** ::Classes/BPF::, link::Classes/BRF:: - 12 dB / octave :args:in:freq:rq:mul:add:
 || arguments: code:: in, freq, rq, mul, add ::
 
 rq is the reciprocal of the Q of the filter,
@@ -620,7 +620,7 @@ code::
 *** subsection:: Resonant Low Pass, High Pass, Band Pass
 
 definitionlist::
-**** ::Classes/RLPF::, link::Classes/RHPF:: - 12 dB / octave           :args:
+**** ::Classes/RLPF::, link::Classes/RHPF:: - 12 dB / octave :args:in:freq:rq:mul:add:
 || arguments: code:: in, freq, rq, mul, add ::
 code::
 #+END_SRC
@@ -642,7 +642,7 @@ code::
 #+END_SRC
 ::
 
-**** ::Classes/Resonz:: - resonant band pass filter with uniform amplitude :args:
+**** ::Classes/Resonz:: - resonant band pass filter with uniform amplitude :args:in:freq:rq:mul:add:
 || arguments: code:: in, freq, rq, mul, add ::
 code::
 #+BEGIN_SRC sclang
@@ -663,7 +663,7 @@ code::
 #+END_SRC
 ::
 
-**** ::Classes/Ringz:: - ringing filter.                               :args:
+**** ::Classes/Ringz:: - ringing filter.      :args:in:freq:ringtime:mul:add:
 || arguments: code:: in, frequency, ring time, mul, add ::
 
 Internally it is the same as Resonz but the bandwidth is expressed as a ring time.
@@ -710,7 +710,7 @@ code::
 
 *** subsection:: NonLinear Filters
 definitionlist::
-**** ::Classes/Median::, link::Classes/Slew::
+**** ::Classes/Median::, link::Classes/Slew::              :in:up:dn:mul:add:
 ||
 code::
 #+BEGIN_SRC sclang
@@ -718,6 +718,7 @@ code::
 { Saw.ar(500, 0.1) + Dust2.ar(100, 0.9) }.scope(1);
 #+END_SRC
 
+length: 3, in: 0, mul: 1, add: 0
 #+BEGIN_SRC sclang
 // after applying median filter
 { Median.ar(3, Saw.ar(500, 0.1) + Dust2.ar(100, 0.9)) }.scope(1);
