@@ -33777,7 +33777,7 @@ SynthDef("help-LFClipNoise", { arg out=0;
 
 ::
 
-** class:: LFCub
+** class:: LFCub                                                      :LFCub:
 summary:: A sine like shape made of two cubic pieces
 related:: Classes/LFPar, Classes/LFPulse, Classes/LFSaw, Classes/LFTri
 categories::  UGens>Generators>Deterministic
@@ -45933,7 +45933,7 @@ Synth("gthhhhppppppp!");
 
 f.remove
 ::
-** class:: Object
+** class:: Object                                                    :object:
 summary:: abstract superclass of all objects
 categories:: Core>Kernel, Language>OOP
 
