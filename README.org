@@ -2,6 +2,14 @@
 
 Emacs/Org-Mode + Supercollider = ??
 
-Tag all Ugen class documentation blocks and break up "sound-making" examples.
+The current version of SCIDE (say, for 3.9.3) has much to recommend it. For some users, of course, the main drawback is simply that it is not Emacs with Org-mode!
 
-Add in Tour of the Ugens in org-mode
+How might one address that (admittedly persnickety) discrepancy? Here are some initial attempts to rethink the organization of existing Supercollider documentation, tutorials and examples while relying on Org-mode for...too much?
+
+Some ideas or TODOs:
+
+- Tag all Ugen class documentation blocks and break up "sound-making" examples.
+
+- Add in Tour of the Ugens in org-mode
+
+- Incorporate the great stuff in ./examples/demonstrations and ./examples/pieces
