@@ -28,11 +28,11 @@
 *** #+name: 1-block
 #+name: 1-block
 #+BEGIN_SRC sclang
-  // { LFPar.ar(800,0,0.02) }.play;
-  // { LFPar.ar(800,0,0.003) }.play;
-f =  { LFPar.ar(800,0,0.2) };
+    // { LFPar.ar(800,0,0.02) }.play;
+    // { LFPar.ar(800,0,0.003) }.play;
+  f =  { LFPar.ar(800,0,0.2) };
 
-{MulAdd.new(f, MouseY.kr(0.02, 0.5))}.play;
+  {MulAdd.new(f, MouseY.kr(0.02, 0.5))}.play;
 
 #+END_SRC
 
